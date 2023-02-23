@@ -1,0 +1,19 @@
+.conatiner-form {
+  margin: 60px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.title-contact {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(140, 80, 196);
+}
+
+.animation-footer {
+  padding-top: 70px;
+}

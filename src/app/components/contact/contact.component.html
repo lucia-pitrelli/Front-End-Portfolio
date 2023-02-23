@@ -1,3 +1,60 @@
 <!--form-->
 
-<h1>Contact</h1>
+<div class="title-contact">
+  <p>Contact</p>
+</div>
+
+<div class="container-form">
+  <form>
+    <!--NOMBRE-->
+    <div class="form-group">
+      <p>
+        Nombre:
+        <input
+          type="text"
+          class="form-control"
+          formControlName="nombre"
+          required
+        />
+      </p>
+
+      <!--EMAIL-->
+      <div class="form-group">
+        <p>
+          Email:
+          <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            required
+          />
+        </p>
+      </div>
+
+      <!--COMENTARIO-->
+      <div class="form-group">
+        <p>
+          Comentarios:
+          <textarea
+            cols="30"
+            rows="10"
+            class="form-control"
+            formControlName="comentarios"
+            required
+          ></textarea>
+        </p>
+      </div>
+      <button class="btn btn-info" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>
+
+<div class="animation-footer">
+  <p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+
+  <p class="placeholder-wave">
+    <span class="placeholder col-12"></span>
+  </p>
+</div>

@@ -1,7 +1,39 @@
-.title {
+.title-project {
+  padding-top: 70px;
+  padding-bottom: 30px;
   text-align: center;
-  font-size: 16px;
+  font-size: 28px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   color: rgb(140, 80, 196);
 }
+
+.card-container {
+  padding: 20px;
+}
+
+.card {
+  padding: 7px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "roboto", "Helvetica Neue", Helvetica, Arial;
+  color: rgb(140, 80, 196);
+}
+
+.card-text {
+  font-size: 16px;
+  font-family: "Roboto", "Helvetica Neue", Hel;
+}
+
+.btn {
+  font-size: 14px;
+  font-family: "Courier New", "Helvetica Neue", Hel;
+  font-weight: bold;
+  padding: 5px;
+  margin: 3px;
+}
+
+/*btn-change and btn project*/

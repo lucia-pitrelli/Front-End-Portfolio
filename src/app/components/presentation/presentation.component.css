@@ -1,9 +1,16 @@
-.presentation {
+.container-presentation {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.text-presentation {
   padding: 40px;
   margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   color: green;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
   text-align: center;
 }
