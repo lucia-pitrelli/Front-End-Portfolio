@@ -1,44 +1,31 @@
 <!--3 pages : add/create, change, delete-->
-<div class="title">
-  <h1>Add a project</h1>
+<div class="title-project">
+  <p>Project</p>
 </div>
 <form>
   <div class="form-group">
-    <label for="project-name">Add Project Name</label>
+    <label for="project-name">Project Name</label>
     <input type="text" class="form-control" id="project-name" />
   </div>
   <div class="form-group">
-    <label for="project-image">Add Image</label>
+    <label for="project-image">Image</label>
     <input type="image" class="form-control" id="project-image" />
   </div>
   <div class="form-group">
-    <label for="project-description">Add Description</label>
+    <label for="project-description">Description</label>
     <input type="text" class="form-control" id="project-description" />
   </div>
-  <button type="submit"><i class="bi bi-file-text-fill"></i>Add Project</button>
+  <button type="submit"><i class="bi bi-file-text-fill"></i>Project</button>
 </form>
 
-<div class="title">
-  <h1>Change a Project</h1>
-</div>
-<form>
-  <div class="form-group">
-    <label for="project-name">Change Project Name</label>
-    <input type="text" class="form-control" id="project-name" />
+<div class="conteiner">
+  <div>
+    <app-change-project></app-change-project>
   </div>
-  <div class="form-group">
-    <label for="project-image">Change Image</label>
-    <input type="image" class="form-control" id="project-image" />
+  <div>
+    <app-add-project></app-add-project>
   </div>
-  <div class="form-group">
-    <label for="project-description">Change Description</label>
-    <input type="text" class="form-control" id="project-description" />
+  <div class="title-project">
+    <h1>Delete a Project</h1>
   </div>
-  <button type="submit">
-    <i class="bi bi-file-text-fill"></i>Change Project
-  </button>
-</form>
-
-<div class="title">
-  <h1>Delete a Project</h1>
 </div>

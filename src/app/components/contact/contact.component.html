@@ -1,40 +1,40 @@
 <!--form-->
 
 <div class="title-contact">
-  <p>Contact</p>
+  <p>Contact Me</p>
 </div>
 
-<div class="container-form">
+<div class="container-contact">
   <form>
     <!--NOMBRE-->
     <div class="form-group">
-      <p>
-        Nombre:
+      <label>
+        Name
         <input
           type="text"
           class="form-control"
           formControlName="nombre"
           required
         />
-      </p>
+      </label>
 
       <!--EMAIL-->
       <div class="form-group">
-        <p>
-          Email:
+        <label>
+          Email
           <input
             type="text"
             class="form-control"
             formControlName="email"
             required
           />
-        </p>
+        </label>
       </div>
 
       <!--COMENTARIO-->
       <div class="form-group">
-        <p>
-          Comentarios:
+        <label>
+          Message
           <textarea
             cols="30"
             rows="10"
@@ -42,7 +42,7 @@
             formControlName="comentarios"
             required
           ></textarea>
-        </p>
+        </label>
       </div>
       <button class="btn btn-info" type="submit">Enviar</button>
     </div>
