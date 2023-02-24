@@ -1,0 +1,14 @@
+.tilte-login {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Roboto", sans;
+  color: rgb(140, 80, 196);
+}
+
+.container-login {
+  background-color: antiquewhite;
+  padding-bottom: 70px;
+}
