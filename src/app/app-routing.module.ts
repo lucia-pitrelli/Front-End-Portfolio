@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ChangeProjectComponent } from './components/change-project/change-project.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { DeleteProjectComponent } from './components/delete-project/delete-project.component';
+import { ProjectComponent } from './components/project/project.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'changeProject', component: ChangeProjectComponent },
   { path: 'addProject', component: AddProjectComponent },
   { path: 'deleteProject', component: DeleteProjectComponent },
+  { path: 'project/:id', component: ProjectComponent }, // no me salio
 ];
 
 @NgModule({
