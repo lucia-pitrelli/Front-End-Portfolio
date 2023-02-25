@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +15,7 @@ import { ListProjectsComponent } from './components/list-projects/list-projects.
 import { LoginComponent } from './components/login/login.component';
 import { ChangeProjectComponent } from './components/change-project/change-project.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
+import { DeleteProjectComponent } from './components/delete-project/delete-project.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
     LoginComponent,
     ChangeProjectComponent,
     AddProjectComponent,
+    DeleteProjectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
