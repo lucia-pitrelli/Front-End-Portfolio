@@ -1,6 +1,6 @@
 .container-about {
   padding: 40px;
-  margin: 20px;
+  margin: 10px;
   margin-top: 70px;
   margin-bottom: 50px;
 }
@@ -23,4 +23,13 @@
   padding: 10px;
   font-size: 16px;
   font-family: "roboto", "Helvetica Neue";
+}
+
+.gif {
+  padding: 10px;
+  margin: 20px;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  width: 380px;
+  height: 377px;
 }

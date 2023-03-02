@@ -3,14 +3,35 @@
   padding-bottom: 30px;
 }
 
-.text-presentation {
-  padding: 40px;
-  margin: 20px;
+.title-presentation {
+  padding-top: 30px;
+  padding-left: 30x;
+  padding-right: 30px;
+  padding-bottom: 10px;
   margin-top: 50px;
-  margin-bottom: 50px;
-  color: green;
+
+  color: rgb(20, 108, 20);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1.5px;
   text-align: center;
+}
+
+.text-presentation {
+  margin: 20px;
+  margin-bottom: 50px;
+  padding-left: 30x;
+  padding-right: 30px;
+
+  color: black;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+i {
+  font-size: 20px;
+  padding-right: 6px;
+  color: #8c55a2;
 }

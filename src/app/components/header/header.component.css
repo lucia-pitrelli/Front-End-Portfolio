@@ -13,6 +13,32 @@
   color: white;
 }
 
+.title-header {
+  font-size: 10px;
+  padding-top: 15px;
+  padding-right: 42px;
+}
+
+.containerBtn {
+  background-color: #8c55a2;
+  padding-left: 100px;
+  padding-top: 0px;
+  font-size: 18px;
+}
+
 .btn-login {
-  color: white;
+  padding: 8px;
+  border-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #8c55a2;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#img-arg {
+  padding-right: 15px;
+  padding-top: 6px;
 }

@@ -1,6 +1,7 @@
 {
   "name": "portfolio-pitrelli",
   "version": "0.0.0",
+  "author": "Lucia Belen Pitrelli, grupo 63",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
-import { ChangeProjectComponent } from './components/change-project/change-project.component';
-import { AddProjectComponent } from './components/add-project/add-project.component';
-import { DeleteProjectComponent } from './components/delete-project/delete-project.component';
+import { ChangeProjectComponent } from './components/ProjectsChange/change-project/change-project.component';
+import { AddProjectComponent } from './components/ProjectsChange/add-project/add-project.component';
+import { DeleteProjectComponent } from './components/ProjectsChange/delete-project/delete-project.component';
 import { ProjectComponent } from './components/project/project.component';
 
 const routes: Routes = [
