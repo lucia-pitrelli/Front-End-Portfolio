@@ -1,52 +1,60 @@
-<!--form-->
-
-<div class="title-contact" id="contact">
-  <p>Contact Me</p>
+<div class="animation-footer">
+  <p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
 </div>
 
-<div class="container-contact">
-  <form>
-    <!--NOMBRE-->
-    <div class="form-group">
-      <label>
-        Name
-        <input
-          type="text"
-          class="form-control"
-          formControlName="nombre"
-          required
-        />
-      </label>
+<!--form-->
 
-      <!--EMAIL-->
+<div class="container-contact">
+  <div class="shadow-lg p-3 rounded">
+    <div class="title-contact" id="contact">
+      <p>Contact Me</p>
+    </div>
+
+    <form>
+      <!--NOMBRE-->
       <div class="form-group">
         <label>
-          Email
+          Name
           <input
             type="text"
             class="form-control"
-            formControlName="email"
+            formControlName="nombre"
             required
           />
         </label>
-      </div>
 
-      <!--COMENTARIO-->
-      <div class="form-group">
-        <label>
-          Message
-          <textarea
-            cols="30"
-            rows="10"
-            class="form-control"
-            formControlName="comentarios"
-            required
-          ></textarea>
-        </label>
+        <!--EMAIL-->
+        <div class="form-group">
+          <label>
+            Email
+            <input
+              type="text"
+              class="form-control"
+              formControlName="email"
+              required
+            />
+          </label>
+        </div>
+
+        <!--COMENTARIO-->
+        <div class="form-group">
+          <label>
+            Message
+            <textarea
+              cols="30"
+              rows="10"
+              class="form-control"
+              formControlName="comentarios"
+              required
+            ></textarea>
+          </label>
+        </div>
+        <button class="btn btn-info" type="submit">Send</button>
       </div>
-      <button class="btn btn-info" type="submit">Enviar</button>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
 
 <div class="animation-footer">

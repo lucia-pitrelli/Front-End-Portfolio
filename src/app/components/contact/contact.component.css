@@ -1,3 +1,15 @@
+.conatiner-contact {
+  padding: 30px;
+  border-radius: 5px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.rounded {
+  width: 500px;
+}
+
 .title-contact {
   padding-top: 70px;
   padding-bottom: 30px;
@@ -6,11 +18,6 @@
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   color: rgb(140, 80, 196);
-}
-
-.conatiner-contact {
-  padding: 30px;
-  border-radius: 5px;
 }
 
 .form-group {

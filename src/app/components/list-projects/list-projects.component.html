@@ -2,10 +2,10 @@
   <p>My Projects</p>
 </div>
 
-<div class="container mt-5">
-  <div class="row align-items-center" *ngFor="let projects of listProjects">
+<div class="container mt-5" *ngFor="let projects of listProjects">
+  <div class="row align-items-center">
     <div class="card-container">
-      <div class="col-md-6">
+      <div class="col-6">
         <div class="card" style="width: 18rem">
           <img
             [attr.src]="projects.image"

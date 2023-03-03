@@ -1,8 +1,13 @@
-.container-about {
-  padding: 40px;
+.container-skills {
+  padding: 30px;
   margin: 20px;
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 137px;
+}
+
+.col {
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .card-header {
@@ -23,4 +28,12 @@
   padding: 10px;
   font-size: 16px;
   font-family: "roboto", "Helvetica Neue";
+}
+
+.progress {
+  background-color: white;
+}
+
+.progress-bar {
+  background-color: rgb(140, 80, 196);
 }
