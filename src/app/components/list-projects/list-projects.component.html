@@ -1,7 +1,17 @@
+<!--title projects-->
 <div class="title-project" id="projects">
   <p>My Projects</p>
 </div>
 
+<!--button add project-->
+<div class="btn">
+  <button class="style-btn">
+    <i class="bi bi-plus-circle-fill"></i
+    ><a href="/addProject"> Add a new Project</a>
+  </button>
+</div>
+
+<!--List of projects-->
 <div class="container mt-5" *ngFor="let projects of listProjects">
   <div class="row align-items-center">
     <div class="card-container">
@@ -18,11 +28,13 @@
             <p class="card-text">
               {{ projects.details }}
             </p>
+            <!--button see the project-->
             <div class="btn-project">
               <a href="/project/:id" class="btn btn-secondary">
                 See the Project <i class="bi bi-arrow-right-circle-fill"></i
               ></a>
             </div>
+            <!--buttons changes and delete project-->
             <div class="btn-change">
               <a href="#" class="btn btn-primary"
                 ><i class="bi bi-file-text-fill"></i>Change</a
@@ -36,11 +48,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="title">
-  <button>
-    <i class="bi bi-plus-circle-fill"></i
-    ><a href="/addProject"> Add a new Project</a>
-  </button>
 </div>

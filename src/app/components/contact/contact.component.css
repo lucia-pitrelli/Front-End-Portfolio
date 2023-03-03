@@ -10,12 +10,15 @@
   padding: 30px;
   border-radius: 5px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .rounded {
   width: 500px;
+  margin-top: 70px;
+  margin-left: 250px;
 }
 
 .title-contact {

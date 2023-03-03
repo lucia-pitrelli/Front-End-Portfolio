@@ -1,14 +1,18 @@
+.container-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
 .tilte-login {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 30px;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   font-family: "Roboto", sans;
   color: rgb(140, 80, 196);
-}
-
-.container-login {
-  background-color: antiquewhite;
-  padding-bottom: 70px;
 }

@@ -1,6 +1,7 @@
+/*title list of projects*/
 .title-project {
   padding-top: 70px;
-  padding-bottom: 30px;
+
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -8,6 +9,7 @@
   color: rgb(140, 80, 196);
 }
 
+/*card project*/
 .card-container {
   padding: 20px;
 }
@@ -28,12 +30,34 @@
   font-family: "Roboto", "Helvetica Neue", Hel;
 }
 
+/*button add, see, change and delete the project + style bootstrap*/
 .btn {
   font-size: 14px;
   font-family: "Courier New", "Helvetica Neue", Hel;
   font-weight: bold;
   padding: 5px;
   margin: 3px;
+}
+
+/*add project btn*/
+
+.style-btn {
+  background-color: rgb(158, 99, 214);
+  padding: 5px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.style-btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.style-btn i {
+  color: white;
+  font-size: 16px;
+  padding: 4px;
 }
 
 /*btn-change and btn project*/

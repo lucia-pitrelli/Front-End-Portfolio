@@ -1,42 +1,46 @@
 <app-header></app-header>
 
 <div class="container-login">
-  <div class="tilte-login">
-    <p>Login to change data</p>
+  <!--title-->
+  <div class="shadow-lg p-3 rounded">
+    <div class="tilte-login">
+      <p>Login to change data</p>
+    </div>
+
+    <!--form-->
+    <form>
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input
+          type="email"
+          id="form2Example1"
+          class="form-control"
+          placeholder="Email"
+        />
+        <label class="form-label" for="form2Example1"></label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input
+          type="password"
+          id="form2Example2"
+          class="form-control"
+          placeholder="Password"
+        />
+        <label class="form-label" for="form2Example2"></label>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block mb-4">
+        Sign in
+      </button>
+
+      <!-- Register buttons -->
+      <div class="text-center">
+        <p>Not a member? <a href="#!">Register</a></p>
+      </div>
+    </form>
   </div>
-
-  <form>
-    <!-- Email input -->
-    <div class="form-outline mb-4">
-      <input
-        type="email"
-        id="form2Example1"
-        class="form-control"
-        placeholder="Email"
-      />
-      <label class="form-label" for="form2Example1"></label>
-    </div>
-
-    <!-- Password input -->
-    <div class="form-outline mb-4">
-      <input
-        type="password"
-        id="form2Example2"
-        class="form-control"
-        placeholder="Password"
-      />
-      <label class="form-label" for="form2Example2"></label>
-    </div>
-
-    <button type="button" class="btn btn-primary btn-block mb-4">
-      Sign in
-    </button>
-
-    <!-- Register buttons -->
-    <div class="text-center">
-      <p>Not a member? <a href="#!">Register</a></p>
-    </div>
-  </form>
 </div>
 
 <app-footer></app-footer>
