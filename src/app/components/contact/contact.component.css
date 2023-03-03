@@ -1,9 +1,17 @@
+/*animation-slide*/
+
+.animation-header .placeholder {
+  min-height: 0.5em;
+}
+
+/*form*/
+
 .conatiner-contact {
   padding: 30px;
   border-radius: 5px;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center;*/
+  justify-content: center;
 }
 
 .rounded {
@@ -11,8 +19,8 @@
 }
 
 .title-contact {
-  padding-top: 70px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 20px;
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -32,6 +40,12 @@
   font-weight: bold;
   padding: 10px;
 }
+
+#text {
+  padding-bottom: 1px;
+}
+
+/*animation-slide*/
 
 .animation-footer {
   padding-top: 70px;

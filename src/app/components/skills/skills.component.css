@@ -30,6 +30,31 @@
   font-family: "roboto", "Helvetica Neue";
 }
 
+.description-skill {
+  display: flex;
+  padding-top: 11px;
+  padding-right: 46px;
+  justify-content: flex-end;
+}
+
+.name-skill {
+  color: black;
+  font-size: 17px;
+  font-family: "roboto", "Helvetica Neue";
+}
+
+.slash-skill {
+  padding-left: 6px;
+  padding-right: 6px;
+  font-weight: bold;
+}
+
+.number-skill {
+  padding-top: 2px;
+  font-style: italic;
+  font-size: 14px;
+}
+
 .progress {
   background-color: white;
 }

@@ -1,3 +1,15 @@
+/*img gif*/
+
+.gif {
+  padding: 10px;
+  margin: 20px;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  width: 380px;
+  height: 377px;
+}
+
+/*setting card about me*/
 .container-about {
   padding: 40px;
   margin: 10px;
@@ -23,13 +35,4 @@
   padding: 10px;
   font-size: 16px;
   font-family: "roboto", "Helvetica Neue";
-}
-
-.gif {
-  padding: 10px;
-  margin: 20px;
-  margin-top: -10px;
-  margin-bottom: 50px;
-  width: 380px;
-  height: 377px;
 }
