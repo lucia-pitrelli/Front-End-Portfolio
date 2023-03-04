@@ -3,10 +3,12 @@
 .gif {
   padding: 10px;
   margin: 20px;
-  margin-top: -10px;
+  margin-top: 11px;
   margin-bottom: 50px;
-  width: 380px;
-  height: 377px;
+  margin-left: -33px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
 }
 
 /*setting card about me*/
@@ -15,6 +17,14 @@
   margin: 10px;
   margin-top: 70px;
   margin-bottom: 50px;
+}
+
+.bg-body {
+  background-color: var(--third-bg-color);
+}
+
+.card-body {
+  background-color: var(--third-bg-color);
 }
 
 .card-header {
@@ -28,11 +38,16 @@
   font-size: 23px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  color: rgb(140, 80, 196);
+  color: var(--main-titles-color);
 }
 
 .card-text {
   padding: 10px;
   font-size: 16px;
   font-family: "roboto", "Helvetica Neue";
+  color: var(--main-text-color);
+}
+
+i {
+  color: var(--third-icons-color);
 }

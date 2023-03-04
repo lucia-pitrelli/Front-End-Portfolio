@@ -28,7 +28,7 @@
   font-size: 28px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  color: rgb(140, 80, 196);
+  color: var(--main-titles-color);
 }
 
 .form-group {
@@ -42,13 +42,22 @@
   font-size: 14px;
   font-weight: bold;
   padding: 10px;
+  color: var(--main-text-color);
 }
 
 #text {
   padding-bottom: 1px;
 }
 
+.shadow-lg {
+  background-color: var(--sixth-bg-color);
+}
+
 /*animation-slide*/
+
+.placeholder {
+  background-color: var(--fifth-bg-color);
+}
 
 .animation-footer {
   padding-top: 70px;

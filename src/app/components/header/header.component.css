@@ -1,16 +1,16 @@
 .navStyle {
   padding: 20px;
   font-size: 18px;
-  color: white;
+  color: var(--fourth-bg-color);
   font-weight: bold;
 }
 
 .containerColor {
-  background-color: #8c55a2;
+  background-color: var(--fourth-bg-color);
 }
 
 .nav-link {
-  color: white;
+  color: var(--third-text-color);
 }
 
 .title-header {
@@ -20,7 +20,7 @@
 }
 
 .containerBtn {
-  background-color: #8c55a2;
+  background-color: var(--fourth-bg-color);
   padding-left: 100px;
   padding-top: 0px;
   font-size: 18px;
@@ -28,12 +28,12 @@
 
 .btn-login {
   padding: 8px;
-  border-color: white;
+  border-color: var(--secondary-icons-color);
 }
 
 a {
   text-decoration: none;
-  color: #8c55a2;
+  color: var(--main-icons-color);
   font-weight: bold;
   font-size: 18px;
 }

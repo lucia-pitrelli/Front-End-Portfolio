@@ -10,7 +10,7 @@
   padding-bottom: 10px;
   margin-top: 50px;
 
-  color: rgb(20, 108, 20);
+  color: var(--header-color);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 18px;
   letter-spacing: 1.5px;
@@ -23,7 +23,7 @@
   padding-left: 30x;
   padding-right: 30px;
 
-  color: black;
+  color: var(--main-text-color);
   font-size: 16px;
   font-style: italic;
   font-weight: bold;
@@ -33,5 +33,12 @@
 i {
   font-size: 20px;
   padding-right: 6px;
-  color: #8c55a2;
+  color: var(--main-icons-color);
+}
+
+/*img */
+
+.img-bg img {
+  border-radius: 50%;
+  width: 400px;
 }

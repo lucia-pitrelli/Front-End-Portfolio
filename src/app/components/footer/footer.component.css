@@ -1,18 +1,18 @@
 .navStyle {
   padding: 20px;
   font-size: 25px;
-  color: white;
+  color: var(--third-text-color);
   font-weight: bold;
 }
 
 .containerColor {
-  background-color: #8c55a2;
+  background-color: var(--fourth-bg-color);
 }
 
 .nav-link {
-  color: white;
+  color: var(--third-text-color);
 }
 
 .img-arg {
-  padding-right: 70px;
+  padding-right: 270px;
 }

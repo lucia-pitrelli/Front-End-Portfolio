@@ -1,3 +1,5 @@
+/*form*/
+
 .container-login {
   display: flex;
   justify-content: space-between;
@@ -7,12 +9,30 @@
   margin-bottom: 140px;
 }
 
-.tilte-login {
+.title-login {
   padding-top: 50px;
   padding-bottom: 30px;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   font-family: "Roboto", sans;
-  color: rgb(140, 80, 196);
+  color: var(--main-titles-color);
+}
+
+.shadow-lg {
+  background-color: var(--sixth-bg-color);
+}
+
+/*dark theme background*/
+
+.dark-btn button {
+  margin-top: 30px;
+  margin-left: 39px;
+  padding: 7px;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--main-text-color);
+  background-color: var(--sixth-bg-color);
+  border-color: var(--secondary-text-color);
+  border-radius: 50%;
 }

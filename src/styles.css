@@ -1,3 +1,39 @@
+:root {
+  --main-bg-color: #ddd8d8;
+  --secondary-bg-color: rgb(140, 80, 196);
+  --third-bg-color: white;
+  --fourth-bg-color: #8c55a2;
+  --fifth-bg-color: rgb(66, 62, 62);
+  --sixth-bg-color: #dddddd96;
+
+  --main-icons-color: #8c55a2;
+  --secondary-icons-color: white;
+  --third-icons-color: rgb(66, 62, 62);
+
+  --main-titles-color: rgb(140, 80, 196);
+  --header-color: rgb(20, 108, 20);
+
+  --main-text-color: rgb(13, 13, 13);
+  --secondary-text-color: #8c55a2;
+  --third-text-color: white;
+  --fourth-text-color: rgb(66, 62, 62);
+}
+
+:root .dark-theme {
+  --main-bg-color: rgb(38 34 72);
+  --secondary-bg-color: rgb(109 29 173);
+  --third-bg-color: #8d8d8d;
+  --fourth-bg-color: #393972;
+
+  --sixth-bg-color: #1616167a;
+
+  --main-titles-color: rgb(109 29 173);
+  --header-color: #8c55a2;
+
+  --main-text-color: white;
+  --secondary-text-color: rgb(13, 13, 13);
+}
+
 .backgroundHome {
-  background-color: #ddd8d8;
+  background-color: var(--main-bg-color);
 }

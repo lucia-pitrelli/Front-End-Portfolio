@@ -10,6 +10,16 @@
   margin-left: 30px;
 }
 
+/*card hard and soft skills */
+
+.bg-body {
+  background-color: var(--third-bg-color);
+}
+
+.card-body {
+  background-color: var(--third-bg-color);
+}
+
 .card-header {
   font-size: 22px;
 }
@@ -21,7 +31,7 @@
   font-size: 23px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  color: rgb(140, 80, 196);
+  color: var(--main-titles-color);
 }
 
 .card-text {
@@ -37,8 +47,13 @@
   justify-content: flex-end;
 }
 
+i {
+  color: var(--third-icons-color);
+}
+
+/* skills*/
 .name-skill {
-  color: black;
+  color: var(--main-text-color);
   font-size: 17px;
   font-family: "roboto", "Helvetica Neue";
 }
@@ -47,18 +62,20 @@
   padding-left: 6px;
   padding-right: 6px;
   font-weight: bold;
+  color: var(--main-text-color);
 }
 
 .number-skill {
   padding-top: 2px;
   font-style: italic;
   font-size: 14px;
+  color: var(--fourth-text-color);
 }
 
 .progress {
-  background-color: white;
+  background-color: var(--third-bg-color);
 }
 
 .progress-bar {
-  background-color: rgb(140, 80, 196);
+  background-color: var(--secondary-bg-color);
 }
