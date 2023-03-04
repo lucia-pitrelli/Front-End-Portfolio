@@ -1,7 +1,6 @@
 /*title list of projects*/
 .title-project {
   padding-top: 70px;
-
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -10,8 +9,18 @@
 }
 
 /*card project*/
+
+.container-project {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .card-container {
   padding: 20px;
+  margin: 20px;
 }
 
 .card {

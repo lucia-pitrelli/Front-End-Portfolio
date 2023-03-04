@@ -9,6 +9,9 @@ import { AddProjectComponent } from './components/ProjectsChange/add-project/add
 import { DeleteProjectComponent } from './components/ProjectsChange/delete-project/delete-project.component';
 import { ProjectComponent } from './components/project/project.component';
 
+import { PortfolioService } from './servicios/portfolio.service';
+import { HttpClientModule } from '@angular/common/http';
+
 const routes: Routes = [
   {
     path: '',
@@ -25,7 +28,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule],
+  providers: [PortfolioService],
 })
 export class AppRoutingModule {}

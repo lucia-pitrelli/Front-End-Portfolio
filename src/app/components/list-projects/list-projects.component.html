@@ -12,22 +12,26 @@
 </div>
 
 <!--List of projects-->
-<div class="container mt-5" *ngFor="let projects of listProjects">
-  <div class="row align-items-center">
+<!--data binding de interpolacion-->
+
+<section class="container-project">
+  <div *ngFor="let project of listProjects">
     <div class="card-container">
-      <div class="col-6">
-        <div class="card" style="width: 18rem">
+      <div>
+        <div class="card m-5" style="width: 22rem">
           <img
-            [attr.src]="projects.image"
+            [attr.src]="project.image"
             class="card-img-top"
             class="img-thumbnail"
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">{{ projects.id }} {{ projects.name }}</h5>
+            <h5 class="card-title">{{ project.id }} | {{ project.name }}</h5>
             <p class="card-text">
-              {{ projects.details }}
+              {{ project.details }}
             </p>
+            <p class="card-text">Date: {{ project.date }}</p>
+
             <!--button see the project-->
             <div class="btn-project">
               <a href="/project/:id" class="btn btn-secondary">
@@ -48,4 +52,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
+      "name": "Landing Page Mercado Libre",
+      "details": "Landing Page",
+      "date": "2022"
+    },
+    {
+      "id": 2,
+      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
+      "name": "Movies DB",
+      "details": "List of movies",
+      "date": "2022"
+    },
+    {
+      "id": 3,
+      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
+      "name": "Portfolio Argentina Programa 4.0",
+      "details": "Proyecto Integrador Portfolio Web Full Stack",
+      "date": "2023"
+    },
+    {
+      "id": 4,
+      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
+      "name": "Calculator angular",
+      "details": "Calculator project for Argentina Programa 4.0",
+      "date": "2023"
+    },
+    {
+      "id": 5,
+      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
+      "name": "Huerto market",
+      "details": "An online grocery website",
+      "date": "2022 -2023"
+    },
+    {
+      "id": 6,
+      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
+      "name": "Playing piano",
+      "details": "An app to practice playing wiht a piano",
+      "date": "2023"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "pepito@gmail.com",
+      "password": "pepito123"
+    },
+    {
+      "id": 2,
+      "email": "roberto@gmail.com",
+      "password": "roberto123"
+    }
+  ]
+}
