@@ -1,10 +1,23 @@
 {
+  "banner": [
+    {
+      "greeting": "Hello, I'm",
+      "name": "Lucia B. Pitrelli",
+      "position": "Full Stack Developer Jr.",
+      "ubication": "Based in Buenos Aires, Argentina."
+    }
+  ],
+
+  "about": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat."
+  ],
+
   "projects": [
     {
       "id": 1,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
-      "name": "Landing Page Mercado Libre",
-      "details": "Landing Page",
+      "name": " Mercado Libre",
+      "details": "Landing Page of Mercad Libre",
       "date": "2022"
     },
     {
@@ -17,8 +30,8 @@
     {
       "id": 3,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
-      "name": "Portfolio Argentina Programa 4.0",
-      "details": "Proyecto Integrador Portfolio Web Full Stack",
+      "name": "Final project Argentina Programa 4.0",
+      "details": " My Portfolio Web Full Stack using Angular ",
       "date": "2023"
     },
     {
@@ -43,6 +56,11 @@
       "date": "2023"
     }
   ],
+
+  "skills": [
+    "Some quick example text to build on the card title and make up the bulk of the card's content."
+  ],
+
   "users": [
     {
       "id": 1,

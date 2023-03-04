@@ -1,16 +1,20 @@
 <div class="container-presentation">
   <div class="container text-center">
     <div class="row align-items-center">
-      <div class="col">
+      <div class="col" *ngFor="let presentation of myPresentation">
         <div class="title-presentation">
-          <h1>Hello, I'm</h1>
-          <h1>Lucia B. Pitrelli</h1>
+          <h1>{{ presentation.greeting }}</h1>
+          <div>
+            <h1>{{ presentation.name }}</h1>
+          </div>
         </div>
         <div class="text-presentation">
           <p>
-            <i class="bi bi-pc-display-horizontal"></i>Full Stack Developer Jr
+            <i class="bi bi-pc-display-horizontal"></i
+            >{{ presentation.position }}
           </p>
-          <p><i class="bi bi-geo-fill"></i>Based in Buenos Aires, Argentina</p>
+
+          <p><i class="bi bi-geo-fill"></i>{{ presentation.ubication }}</p>
         </div>
       </div>
       <div class="col">
