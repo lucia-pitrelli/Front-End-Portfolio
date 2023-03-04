@@ -27,6 +27,10 @@
   background-color: var(--third-bg-color);
 }
 
+.mb-5 {
+  margin-bottom: 0rem !important;
+}
+
 .card-header {
   font-size: 22px;
 }
@@ -50,4 +54,13 @@
 
 i {
   color: var(--third-icons-color);
+}
+
+/*btn-update*/
+.btn-update {
+  margin-top: 4px;
+}
+
+.btn-update i {
+  padding: 3px;
 }

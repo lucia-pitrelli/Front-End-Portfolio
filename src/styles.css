@@ -27,7 +27,8 @@
 
   --sixth-bg-color: #1616167a;
 
-  --main-titles-color: rgb(109 29 173);
+  --main-titles-color: white;
+  --secondary-titles-color: rgb(109 29 173);
   --header-color: #8c55a2;
 
   --main-text-color: white;

@@ -40,6 +40,16 @@
   font-family: "roboto", "Helvetica Neue";
 }
 
+.mb-5 {
+  margin-bottom: 0rem !important;
+}
+
+i {
+  color: var(--third-icons-color);
+}
+
+/*list of skills*/
+
 .description-skill {
   display: flex;
   padding-top: 11px;
@@ -47,11 +57,6 @@
   justify-content: flex-end;
 }
 
-i {
-  color: var(--third-icons-color);
-}
-
-/* skills*/
 .name-skill {
   color: var(--main-text-color);
   font-size: 17px;
@@ -78,4 +83,14 @@ i {
 
 .progress-bar {
   background-color: var(--secondary-bg-color);
+}
+
+/*button update features*/
+
+.btn-update {
+  margin-top: 4px;
+}
+
+.btn-update i {
+  padding: 3px;
 }

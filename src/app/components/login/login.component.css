@@ -19,6 +19,11 @@
   color: var(--main-titles-color);
 }
 
+.form-control {
+  padding-right: 70px;
+  margin-right: 10px;
+}
+
 .shadow-lg {
   background-color: var(--sixth-bg-color);
 }

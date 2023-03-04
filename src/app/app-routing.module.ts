@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   { path: 'changeProject', component: ChangeProjectComponent },
   { path: 'addProject', component: AddProjectComponent },
-  { path: 'deleteProject', component: DeleteProjectComponent },
+  { path: 'deleteProject', component: DeleteProjectComponent }, //no se si es form
   { path: 'project/:id', component: ProjectComponent }, // no me salio
 ];
 

@@ -42,3 +42,9 @@ i {
   border-radius: 50%;
   width: 400px;
 }
+
+/*button update features*/
+
+.btn-update i {
+  padding-left: 3px;
+}

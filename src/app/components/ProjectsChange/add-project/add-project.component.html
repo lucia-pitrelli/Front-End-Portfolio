@@ -1,22 +1,56 @@
 <app-header></app-header>
 
-<div class="title-project">
-  <p>Add a project</p>
+<!--form-->
+<div class="container-contact">
+  <div class="shadow-lg p-3 rounded">
+    <div class="title-project">
+      <p>Add a new project</p>
+    </div>
+    <form>
+      <div class="form-group">
+        <!--name project-->
+        <input
+          type="text"
+          class="form-control"
+          id="project-name"
+          placeholder="Add Name"
+        />
+      </div>
+      <!--image project-->
+      <div class="form-group">
+        <input
+          type="image"
+          class="form-control"
+          id="project-image"
+          placeholder="Add Image"
+        />
+      </div>
+      <!--description project-->
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="project-description"
+          placeholder="Add Description"
+        />
+      </div>
+      <!--date project-->
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="project-description"
+          placeholder="Add work date"
+        />
+      </div>
+      <!--button-->
+      <div class="btn-add">
+        <button type="submit">
+          <i class="bi bi-file-text-fill"></i>Submit
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
-<form>
-  <div class="form-group">
-    <label for="project-name">Add Project Name</label>
-    <input type="text" class="form-control" id="project-name" />
-  </div>
-  <div class="form-group">
-    <label for="project-image">Add Image</label>
-    <input type="image" class="form-control" id="project-image" />
-  </div>
-  <div class="form-group">
-    <label for="project-description">Add Description</label>
-    <input type="text" class="form-control" id="project-description" />
-  </div>
-  <button type="submit"><i class="bi bi-file-text-fill"></i>Add Project</button>
-</form>
 
 <app-footer></app-footer>
