@@ -22,7 +22,7 @@
 }
 
 .title-contact {
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
   font-size: 28px;
@@ -41,7 +41,7 @@
 .form-group label {
   font-size: 14px;
   font-weight: bold;
-  padding: 10px;
+  padding: 6px;
   color: var(--main-text-color);
 }
 

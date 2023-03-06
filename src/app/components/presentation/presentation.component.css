@@ -1,6 +1,6 @@
 .container-presentation {
   padding-top: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
 .title-presentation {
@@ -40,7 +40,7 @@ i {
 
 .img-bg img {
   border-radius: 50%;
-  width: 400px;
+  width: 350px;
 }
 
 /*button update features*/

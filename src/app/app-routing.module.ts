@@ -8,6 +8,7 @@ import { ChangeProjectComponent } from './components/ProjectsChange/change-proje
 import { AddProjectComponent } from './components/ProjectsChange/add-project/add-project.component';
 import { DeleteProjectComponent } from './components/ProjectsChange/delete-project/delete-project.component';
 import { ProjectComponent } from './components/project/project.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'addProject', component: AddProjectComponent },
   { path: 'deleteProject', component: DeleteProjectComponent }, //no se si es form
   { path: 'project/:id', component: ProjectComponent }, // no me salio
+  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
 @NgModule({
