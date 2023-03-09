@@ -24,159 +24,333 @@
 
     <!--List of skills-->
     <div class="col">
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Javascript</p>
+      <div *ngFor="let skill of listOfSkills; let i = index">
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>{{ skill.name }}</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ skill.percentage }}%</p>
+          </div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>73%</p></div>
-      </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 70%"
-          aria-valuenow="70"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Typescript</p>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="skill.percentage"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>75%</p></div>
-      </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 75%"
-          aria-valuenow="75"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Java</p>
+        <div class="mt-2">
+          <input
+            type="button"
+            value="Minus"
+            class="btn btn-outline-danger"
+            (click)="onProgress(0)"
+          />
+          <input
+            type="button"
+            value="Plus"
+            class="btn btn-outline-danger"
+            (click)="onProgress(1)"
+          />
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>60%</p></div>
       </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 60%"
-          aria-valuenow="60"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Data Base</p>
+
+      <!--
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>Typescript</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>65%</p></div>
-      </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 65%"
-          aria-valuenow="50"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Angular</p>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>87%</p></div>
-      </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 87%"
-          aria-valuenow="87"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>HTML</p>
+
+        <div class="mt-2">
+          <input
+            type="button"
+            value="Minus"
+            class="btn btn-outline-danger"
+            (click)="onProgress(0)"
+          />
+          <input
+            type="button"
+            value="Plus"
+            class="btn btn-outline-danger"
+            (click)="onProgress(1)"
+          />
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>92%</p></div>
       </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 92%"
-          aria-valuenow="92"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>CSS</p>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>Java</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>73%</p></div>
-      </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 73%"
-          aria-valuenow="73"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
-      </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Bootstrap</p>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="60"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>62%</p></div>
       </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 62%"
-          aria-valuenow="62"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
       </div>
-      <div class="description-skill">
-        <div class="name-skill">
-          <p>Scrum</p>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>Data Base</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
         </div>
-        <div class="slash-skill"><p>|</p></div>
-        <div class="number-skill"><p>80%</p></div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
+        </div>
       </div>
-      <div class="progress">
-        <div
-          class="progress-bar progress-bar-striped progress-bar-animated"
-          role="progressbar"
-          style="width: 80%"
-          aria-valuenow="80"
-          aria-valuemin="0"
-          aria-valuemax="200"
-        ></div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
+      </div>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>Angular</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="87"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
+      </div>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>HTML</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="92"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
+      </div>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>CSS</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="73"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
+      </div>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>Bootstrap</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="62"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
+      </div>
+
+      <div>
+        <div class="description-skill">
+          <div class="name-skill">
+            <p>Scrum</p>
+          </div>
+          <div class="slash-skill"><p>|</p></div>
+          <div class="number-skill">
+            <p>{{ wd }}%</p>
+          </div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="wd"
+            aria-valuenow="80"
+            aria-valuemin="0"
+            aria-valuemax="200"
+          ></div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <input
+          type="button"
+          value="Minus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(0)"
+        />
+        <input
+          type="button"
+          value="Plus"
+          class="btn btn-outline-danger"
+          (click)="onProgress(1)"
+        />
       </div>
     </div>
+    --></div>
   </div>
 </div>

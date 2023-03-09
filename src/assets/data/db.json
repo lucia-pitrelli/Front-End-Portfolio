@@ -61,28 +61,11 @@
     "Some quick example text to build on the card title and make up the bulk of the card's content."
   ],
 
-  "skillsList": [
-    { "name": "Javascript", "percentage": "78" },
-    { "name": "Typescript", "percentage": "75" },
-    { "name": "Java", "percentage": "65" },
-    { "name": "Data Base", "percentage": "70" },
-    { "name": "Angular", "percentage": "87" },
-    { "name": "HTML", "percentage": "92" },
-    { "name": "CSS", "percentage": "80" },
-    { "name": "Bootstrap", "percentage": "70" },
-    { "name": "Scrum", "percentage": "82" }
-  ],
-
-  "users": [
+  "admin": [
     {
       "id": 1,
       "email": "pepito@gmail.com",
       "password": "pepito123"
-    },
-    {
-      "id": 2,
-      "email": "roberto@gmail.com",
-      "password": "roberto123"
     }
   ]
 }

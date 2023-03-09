@@ -5,8 +5,11 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   aboutMe: any;
+
+  gifAbout = '../../../assets/perfil.gif';
+
   constructor(private datosPortfolio: PortfolioService) {}
 
   //suscribe para utilizar el data.json

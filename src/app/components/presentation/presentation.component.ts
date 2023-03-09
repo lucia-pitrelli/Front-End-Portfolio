@@ -8,6 +8,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class PresentationComponent implements OnInit {
   myPresentation: any;
+
+  myImage = '../../../../assets/img/third-img.png';
+
   constructor(private datosPortfolio: PortfolioService) {}
 
   //suscribe para utilizar el data.json

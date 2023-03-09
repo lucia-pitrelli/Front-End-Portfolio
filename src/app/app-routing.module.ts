@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -31,7 +32,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), HttpClientModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   exports: [RouterModule],
   providers: [PortfolioService],
 })
