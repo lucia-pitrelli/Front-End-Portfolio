@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'deleteProject', component: DeleteProjectComponent }, //no se si es form
   { path: 'project/:id', component: ProjectComponent }, // no me salio
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
+  //{ path: '', redirectTo: '', pathMatch: 'full' }, //funciona?
 ];
 
 @NgModule({
