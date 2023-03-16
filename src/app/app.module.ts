@@ -18,6 +18,7 @@ import { AddProjectComponent } from './components/ProjectsChange/add-project/add
 import { DeleteProjectComponent } from './components/ProjectsChange/delete-project/delete-project.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     DeleteProjectComponent,
     SkillsComponent,
     PageNotFoundComponent,
+    DashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
