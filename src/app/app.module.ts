@@ -19,6 +19,7 @@ import { AddProjectComponent } from './components/ProjectsChange/add-project/add
 import { DeleteProjectComponent } from './components/ProjectsChange/delete-project/delete-project.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     DeleteProjectComponent,
     SkillsComponent,
     PageNotFoundComponent,
+    EducationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
