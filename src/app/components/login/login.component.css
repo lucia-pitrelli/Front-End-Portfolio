@@ -28,6 +28,12 @@
   background-color: var(--sixth-bg-color);
 }
 
+/*error message*/
+.error {
+  color: red;
+  font-weight: bold;
+}
+
 /*dark theme background*/
 
 .dark-btn button {

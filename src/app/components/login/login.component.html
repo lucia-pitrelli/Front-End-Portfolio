@@ -14,10 +14,10 @@
     </div>
 
     <!--form
-    <form [formGroup]="form">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
      
      Email input -->
-    <form>
+    <form [formGroup]="form">
       <div class="form-outline mb-4">
         <input
           type="email"
@@ -26,6 +26,11 @@
           placeholder="Email"
         />
         <label class="form-label" for="form2Example1"></label>
+      </div>
+      <!--Error email-->
+      <div class="error">
+        <p>The email isn't valid</p>
+        <p>The email is required</p>
       </div>
 
       <!-- Password input -->
@@ -38,6 +43,13 @@
         />
         <label class="form-label" for="form2Example2"></label>
       </div>
+
+      <!--Error password-->
+      <div class="error">
+        <p>The password isn't valid</p>
+        <p>The password is required</p>
+      </div>
+
       <!--submit button-->
       <button type="submit" class="btn btn-primary btn-block mb-4">
         Sign in

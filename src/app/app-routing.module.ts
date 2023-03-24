@@ -10,9 +10,9 @@ import { DeleteProjectComponent } from './components/ProjectsChange/delete-proje
 import { ProjectComponent } from './components/project/project.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { PortfolioService } from './servicios/portfolio.service';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PortfolioService } from './servicios/portfolio.service'; //ver
+import { HttpClientModule } from '@angular/common/http'; //ver
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //ver
 
 const routes: Routes = [
   {
