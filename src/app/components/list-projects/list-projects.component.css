@@ -10,6 +10,11 @@
 
 /*card project*/
 
+/*.listProjects {
+  display: grid;
+  justify-content: center;
+}*/
+
 .container-project {
   display: flex;
   align-items: stretch;

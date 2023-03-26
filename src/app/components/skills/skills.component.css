@@ -79,6 +79,7 @@ i {
 
 .progress {
   background-color: var(--third-bg-color);
+  height: 0.7rem;
 }
 
 .progress-bar {

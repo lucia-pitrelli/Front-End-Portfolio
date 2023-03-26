@@ -13,19 +13,28 @@
   color: var(--third-text-color);
 }
 
+/*title and image yo Programo*/
+
 .title-header {
   font-size: 10px;
   padding-top: 15px;
-  padding-right: 42px;
+  padding-right: 60px;
   color: var(--third-text-color);
+}
+
+#img-arg {
+  padding-right: 15px;
+  padding-top: 6px;
 }
 
 .containerBtn {
   background-color: var(--fourth-bg-color);
-  padding-left: 100px;
+  padding-left: 940px;
   padding-top: 0px;
   font-size: 18px;
 }
+
+/*login button*/
 
 .btn-login {
   padding: 8px;
@@ -37,9 +46,4 @@ a {
   color: var(--main-icons-color);
   font-weight: bold;
   font-size: 18px;
-}
-
-#img-arg {
-  padding-right: 15px;
-  padding-top: 6px;
 }
