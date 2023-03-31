@@ -1,3 +1,13 @@
+.title-skills {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--main-titles-color);
+}
+
 .container-skills {
   padding: 30px;
   margin: 20px;
@@ -10,7 +20,7 @@
   margin-left: 30px;
 }
 
-/*card hard and soft skills */
+/*card soft skills */
 
 .bg-body {
   background-color: var(--third-bg-color);
@@ -48,7 +58,7 @@ i {
   color: var(--third-icons-color);
 }
 
-/*list of skills*/
+/*list of hard skills*/
 
 .description-skill {
   display: flex;
@@ -86,7 +96,7 @@ i {
   background-color: var(--secondary-bg-color);
 }
 
-/*button update features*/
+/*button update features
 
 .btn-update {
   margin-top: 4px;
@@ -95,3 +105,4 @@ i {
 .btn-update i {
   padding: 3px;
 }
+*/

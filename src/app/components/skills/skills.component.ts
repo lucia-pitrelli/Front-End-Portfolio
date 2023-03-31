@@ -37,7 +37,7 @@ export class SkillsComponent implements OnInit {
     });
   }
 
-  onProgress(side: number) {
+  /* onProgress(side: number) {
     //implementation of limitations of progress bar
     if (this.percentage <= 10) {
       this.percentage = 15;
@@ -53,5 +53,5 @@ export class SkillsComponent implements OnInit {
       //minus
       this.percentage -= 5;
     }
-  }
+  }*/
 }

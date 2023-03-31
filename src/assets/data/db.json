@@ -17,7 +17,7 @@
       "id": 1,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
       "name": " Mercado Libre",
-      "details": "Landing Page of Mercad Libre",
+      "details": "Landing Page of Mercado Libre",
       "date": "2022"
     },
     {
@@ -30,8 +30,8 @@
     {
       "id": 3,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
-      "name": "Final project Argentina Programa 4.0",
-      "details": " My Portfolio Web Full Stack using Angular ",
+      "name": "My Portfolio",
+      "details": "Final project Argentina Programa 4.0, My Portfolio Web Full Stack using Angular ",
       "date": "2023"
     },
     {
@@ -58,10 +58,10 @@
   ],
 
   "skills": [
-    "Some quick example text to build on the card title and make up the bulk of the card's content."
+    "I regard that I have strong communication skills to build positive relationships with colleagues and clients. My adaptability and problem-solving abilities allow me to remain calm and focused even in fast-paced or uncertain situations, while my attention to detail ensures that I consistently produce high-quality work."
   ],
 
-  "admin": [
+  "users": [
     {
       "id": 1,
       "email": "pepito@gmail.com",
