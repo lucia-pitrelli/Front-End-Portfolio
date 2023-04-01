@@ -1,6 +1,6 @@
 <div><p class="title" id="education">Education</p></div>
 
-<section class="container_education">
+<section class="container_education" *ngFor="let course of listofCourses">
   <div class="qualification__data">
     <div></div>
     <div>
@@ -8,53 +8,14 @@
       <span class="qualification__line"></span>
     </div>
     <div class="education_description_2">
-      <p class="title_course">UADE</p>
-      <p class="text_course">Bachelor's Degree in Business Administration</p>
-      <div>
-        <p><i class="bi bi-calendar4-week"></i>2016 - To date</p>
+      <p class="title_course">{{ course.id }} | {{ course.institution }}</p>
+      <p class="text_course">{{ course.degree }}</p>
+      <div class="icon-dates">
+        <p><i class="bi bi-calendar4-week"></i>{{ course.date }}</p>
       </div>
-    </div>
-  </div>
-  <div class="qualification__data">
-    <div class="education_description">
-      <p class="title_course">Digital House</p>
-      <p class="text_course">Full stack developer</p>
-      <div>
-        <p><i class="bi bi-calendar4-week"></i>2021-2022</p>
-      </div>
-    </div>
-    <div>
-      <span class="qualification__rounder"> </span>
-      <span class="qualification__line"></span>
-    </div>
-    <div></div>
-  </div>
-  <div class="qualification__data">
-    <div></div>
-    <div>
-      <span class="qualification__rounder"> </span>
-      <span class="qualification__line"></span>
-    </div>
-    <div class="education_description_2">
-      <p class="title_course">Argentina Programa 4.0</p>
-      <p class="title_course">Sé Programar</p>
-      <p class="text_course">Full stack developer</p>
-      <div>
-        <p><i class="bi bi-calendar4-week"></i>2022</p>
-      </div>
-    </div>
-  </div>
-  <div class="qualification__data">
-    <div class="education_description">
-      <p class="title_course">Argentina Programa 4.0</p>
-      <p class="title_course">Yo Programo</p>
-      <p class="text_course">Full stack developer</p>
-      <div>
-        <p><i class="bi bi-calendar4-week"></i>2023 - To date</p>
-      </div>
-    </div>
-    <div>
-      <span class="qualification__rounder"> </span>
     </div>
   </div>
 </section>
+<div class="final-icon-container">
+  <i class="bi bi-star-fill"></i>
+</div>

@@ -12,6 +12,33 @@
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat."
   ],
 
+  "education": [
+    {
+      "id": "1",
+      "institution": "UADE",
+      "degree": "Bachelor's Degree in Business Administration",
+      "date": "2016 - To date"
+    },
+    {
+      "id": "2",
+      "institution": "Digital House",
+      "degree": "Full stack developer",
+      "date": "2021-2022"
+    },
+    {
+      "id": "3",
+      "institution": "Argentina Programa 4.0",
+      "degree": "Sé Programar, Full stack developer",
+      "date": "2022"
+    },
+    {
+      "id": "4",
+      "institution": "Argentina Programa 4.0",
+      "degree": "Yo Programo, Full stack developer",
+      "date": "2022 - To date"
+    }
+  ],
+
   "projects": [
     {
       "id": 1,
