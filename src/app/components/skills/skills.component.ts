@@ -8,20 +8,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class SkillsComponent implements OnInit {
   mySkills: any;
-  //listOfSkills: any;
-  percentage: number = 10;
-
-  listOfSkills = [
-    { id: 1, name: 'Javascript', percentage: '50' },
-    { id: 2, name: 'Typescript', percentage: '70' },
-    { id: 3, name: 'Java', percentage: '80' },
-    { id: 4, name: 'Data Base', percentage: '60' },
-    { id: 5, name: 'Angular', percentage: '20' },
-    { id: 6, name: 'HTML', percentage: '30' },
-    { id: 7, name: 'CSS', percentage: '70' },
-    { id: 8, name: 'Bootstrap', percentage: '90' },
-    { id: 9, name: 'Scrum', percentage: '40' },
-  ];
+  listOfSkills: any;
+  //percentage: number = 10;
 
   //n = 15;
 
@@ -32,8 +20,8 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log(data);
 
-      this.mySkills = data.skills; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
-      //  this.listOfSkills = data.skillsList;
+      this.mySkills = data.softSkills; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
+      this.listOfSkills = data.hardSkills;
     });
   }
 

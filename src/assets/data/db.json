@@ -57,8 +57,20 @@
     }
   ],
 
-  "skills": [
+  "softSkills": [
     "I regard that I have strong communication skills to build positive relationships with colleagues and clients. My adaptability and problem-solving abilities allow me to remain calm and focused even in fast-paced or uncertain situations, while my attention to detail ensures that I consistently produce high-quality work."
+  ],
+
+  "hardSkills": [
+    { "id": 1, "name": "Javascript", "percentage": "50" },
+    { "id": 2, "name": "Typescript", "percentage": "70" },
+    { "id": 3, "name": "Java", "percentage": "80" },
+    { "id": 4, "name": "Data Base", "percentage": "60" },
+    { "id": 5, "name": "Angular", "percentage": "20" },
+    { "id": 6, "name": "HTML", "percentage": "30" },
+    { "id": 7, "name": "CSS", "percentage": "70" },
+    { "id": 8, "name": "Bootstrap", "percentage": "90" },
+    { "id": 9, "name": "Scrum", "percentage": "40" }
   ],
 
   "users": [
