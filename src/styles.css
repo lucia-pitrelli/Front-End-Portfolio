@@ -1,38 +1,38 @@
 :root {
   --main-bg-color: #ddd8d8;
-  --secondary-bg-color: rgb(140, 80, 196);
-  --third-bg-color: white;
+  --secondary-bg-color: #8c50c4;
+  --third-bg-color: #FFFFFF;
   --fourth-bg-color: #8c55a2;
-  --fifth-bg-color: rgb(66, 62, 62);
+  --fifth-bg-color: #423e3e;
   --sixth-bg-color: #dddddd96;
 
   --main-icons-color: #8c55a2;
-  --secondary-icons-color: white;
-  --third-icons-color: rgb(66, 62, 62);
+  --secondary-icons-color: #FFFFFF;
+  --third-icons-color: #423e3e;
 
-  --main-titles-color: rgb(140, 80, 196);
-  --header-color: rgb(11 0 175);
+  --main-titles-color: #8c50c4;
+  --header-color: #0b00af;
 
-  --main-text-color: rgb(13, 13, 13);
+  --main-text-color: #0d0d0d;
   --secondary-text-color: #8c55a2;
-  --third-text-color: white;
-  --fourth-text-color: rgb(66, 62, 62);
+  --third-text-color: #FFFFFF
+  --fourth-text-color: #423e3e;
 }
 
 :root .dark-theme {
-  --main-bg-color: rgb(38 34 72);
-  --secondary-bg-color: rgb(109 29 173);
+  --main-bg-color: #262248;
+  --secondary-bg-color: #6d1dad;
   --third-bg-color: #8d8d8d;
   --fourth-bg-color: #393972;
 
   --sixth-bg-color: #1616167a;
 
-  --main-titles-color: white;
-  --secondary-titles-color: rgb(109 29 173);
+  --main-titles-color: #FFFFFF;
+  --secondary-titles-color: #6d1dad;
   --header-color: #ff8556;
 
-  --main-text-color: white;
-  --secondary-text-color: rgb(13, 13, 13);
+  --main-text-color: #FFFFFF;
+  --secondary-text-color: #0d0d0d;
 }
 
 .backgroundHome {
