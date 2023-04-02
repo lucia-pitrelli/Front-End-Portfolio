@@ -22,6 +22,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { EducationComponent } from './components/education/education.component';
 import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
 import { AddAboutComponent } from './components/modals/add-about/add-about.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ButtonLoginComponent } from './button-login/button-login.component';
+import { ButtonLogoutComponent } from './button-logout/button-logout.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { AddAboutComponent } from './components/modals/add-about/add-about.compo
     EducationComponent,
     SocialNetworksComponent,
     AddAboutComponent,
+    DashboardComponent,
+    ButtonLoginComponent,
+    ButtonLogoutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
