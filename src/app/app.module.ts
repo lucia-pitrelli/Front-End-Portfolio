@@ -14,12 +14,14 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { FooterComponent } from './components/footer/footer.component';
 import { ListProjectsComponent } from './components/list-projects/list-projects.component';
 import { LoginComponent } from './components/login/login.component';
-import { ChangeProjectComponent } from './components/ProjectsChange/change-project/change-project.component';
-import { AddProjectComponent } from './components/ProjectsChange/add-project/add-project.component';
-import { DeleteProjectComponent } from './components/ProjectsChange/delete-project/delete-project.component';
+import { ChangeProjectComponent } from './components/modals/change-project/change-project.component';
+import { AddProjectComponent } from './components/modals/add-project/add-project.component';
+import { DeleteProjectComponent } from './components/modals/delete-project/delete-project.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EducationComponent } from './components/education/education.component';
+import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
+import { AddAboutComponent } from './components/modals/add-about/add-about.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { EducationComponent } from './components/education/education.component';
     SkillsComponent,
     PageNotFoundComponent,
     EducationComponent,
+    SocialNetworksComponent,
+    AddAboutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
