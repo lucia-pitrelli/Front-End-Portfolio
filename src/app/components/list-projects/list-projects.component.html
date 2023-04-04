@@ -1,3 +1,7 @@
+<div>
+  <button type="button" (click)="mostrar = !mostrar">Mostrar/ocultar</button>
+</div>
+
 <!--title projects-->
 <div class="title-project" id="projects">
   <p>My Projects</p>
@@ -5,7 +9,7 @@
 
 <!--button add project-->
 <div class="btn">
-  <button class="style-btn">
+  <button class="style-btn" type="button" *ngIf="mostrar">
     <i class="bi bi-plus-circle-fill"></i
     ><a href="/addProject"> Add a new Project</a>
   </button>
@@ -40,11 +44,11 @@
                 ></a>
               </div>
               <!--buttons changes and delete project-->
-              <div class="btn-change">
+              <div class="btn-change" *ngIf="mostrar">
                 <a href="#" class="btn btn-primary"
                   ><i class="bi bi-pencil-fill"></i>Change</a
                 >
-                <a href="#" class="btn btn-primary"
+                <a href="#" class="btn btn-primary" *ngIf="mostrar"
                   ><i class="bi bi-trash3-fill"></i>Delete</a
                 >
               </div>

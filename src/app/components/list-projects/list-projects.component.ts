@@ -7,8 +7,12 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './list-projects.component.html',
   styleUrls: ['./list-projects.component.css'],
 })
+//export class NgIfSimple {
+//
+//}
 export class ListProjectsComponent implements OnInit {
   listProjects: any;
+  mostrar = true;
   constructor(private datosPortfolio: PortfolioService) {}
 
   //suscribe para utilizar el data.json
