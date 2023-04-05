@@ -30,8 +30,11 @@
         </li>
       </ul>
     </nav>
+
     <app-button-login></app-button-login>
-    <app-button-logout></app-button-logout>
-    <!--  <div *ngIf="currentCustomer">Hello, Admin</div> -->
+    <div class="title-welcome" *ngIf="login"><p>Welcome, Admin</p></div>
+    <div *ngIf="!login">
+      <app-button-logout></app-button-logout>
+    </div>
   </div>
 </div>

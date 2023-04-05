@@ -10,5 +10,6 @@ export class HeaderComponent implements OnInit {
 
   titleHeader = '# Yo Programo';
 
+  login = true;
   ngOnInit(): void {}
 }

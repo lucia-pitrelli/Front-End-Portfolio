@@ -31,3 +31,12 @@
   width: 130px;
   height: 45px;
 }
+
+/*title welcome*/
+.title-welcome {
+  color: var(--header-color);
+  font-size: 22 px;
+
+  display: flex;
+  flex-direction: row-reverse;
+}
