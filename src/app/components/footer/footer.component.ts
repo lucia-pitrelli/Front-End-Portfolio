@@ -7,5 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   logoAp = '../../../assets/img/APLogo.png';
+
   ngOnInit(): void {}
 }

@@ -3,14 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProjectComponent } from './components/project/project.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { PortfolioService } from './servicios/portfolio.service'; //ver
 import { HttpClientModule } from '@angular/common/http'; //ver
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //ver
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {

@@ -106,5 +106,23 @@
       "email": "pepito@gmail.com",
       "password": "pepito123"
     }
+  ],
+
+  "socialNetworks": [
+    {
+      "id": "1",
+      "name": "Github",
+      "url": "http://github.com/lucia-pitrelli"
+    },
+    {
+      "id": "2",
+      "name": "LinkedIn",
+      "url": "http://github.com/lucia-pitrelli"
+    },
+    {
+      "id": "3",
+      "name": "Email",
+      "url": "http://github.com/lucia-pitrelli"
+    }
   ]
 }

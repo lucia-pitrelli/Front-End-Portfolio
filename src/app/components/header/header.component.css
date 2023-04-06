@@ -32,11 +32,13 @@
   height: 45px;
 }
 
+.container-admin {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
 /*title welcome*/
 .title-welcome {
   color: var(--header-color);
   font-size: 22 px;
-
-  display: flex;
-  flex-direction: row-reverse;
 }

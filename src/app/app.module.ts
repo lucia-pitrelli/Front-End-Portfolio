@@ -20,8 +20,9 @@ import { DeleteProjectComponent } from './components/modals/delete-project/delet
 import { SkillsComponent } from './components/skills/skills.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EducationComponent } from './components/education/education.component';
-import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
+
 import { AddAboutComponent } from './components/modals/add-about/add-about.component';
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ButtonLoginComponent } from './components/button-login/button-login.component';
 import { ButtonLogoutComponent } from './components/button-logout/button-logout.component';
@@ -44,7 +45,6 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
     SkillsComponent,
     PageNotFoundComponent,
     EducationComponent,
-    SocialNetworksComponent,
     AddAboutComponent,
     DashboardComponent,
     ButtonLoginComponent,

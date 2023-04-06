@@ -32,7 +32,19 @@
     </nav>
 
     <app-button-login></app-button-login>
-    <div class="title-welcome" *ngIf="login"><p>Welcome, Admin</p></div>
+    <div class="container-admin">
+      <ul>
+        <li>
+          <div class="title-welcome" *ngIf="login"><p>Welcome, Admin</p></div>
+        </li>
+
+        <li>
+          <div *ngIf="login">
+            <button><a href="/dashboard"></a>Go Dashboard</button>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div *ngIf="!login">
       <app-button-logout></app-button-logout>
     </div>
