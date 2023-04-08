@@ -7,9 +7,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProjectComponent } from './components/project/project.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { PortfolioService } from './servicios/portfolio.service'; //ver
+import { PortfolioService } from './services/portfolio.service'; //ver
 import { HttpClientModule } from '@angular/common/http'; //ver
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //ver
+//import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -20,7 +21,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
   },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  }, // visit home only if authenticated
 
   { path: 'project/:id', component: ProjectComponent }, // no me salio
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },

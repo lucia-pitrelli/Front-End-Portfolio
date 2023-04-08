@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { PROJECTS } from 'src/app/mock-projects';
 //import { Project } from 'src/app/Project';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 @Component({
   selector: 'app-list-projects',
   templateUrl: './list-projects.component.html',
