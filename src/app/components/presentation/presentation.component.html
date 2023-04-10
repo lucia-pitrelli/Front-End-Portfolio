@@ -50,13 +50,13 @@
         class="modal fade"
         id="presentationModal"
         tabindex="-1"
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="presentationModalLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div style="background-color: #d4cbdd" class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <h1 class="modal-title fs-5" id="presentationModalLabel">
                 Edit: Presentation
               </h1>
               <button
@@ -69,7 +69,7 @@
 
             <!--form-->
             <div class="modal-body">
-              <form [formGroup]="formValue">
+              <form [formGroup]="formValuePresentation">
                 <!--greeting-->
                 <div class="row mb-3">
                   <label for="colFormLabel" class="col-sm-2 col-form-label"
@@ -89,14 +89,14 @@
                 <div>
                   <div
                     *ngIf="
-                      formValue.get('greeting')?.invalid &&
-                      formValue.get('greeting')?.touched
+                      formValuePresentation.get('greeting')?.invalid &&
+                      formValuePresentation.get('greeting')?.touched
                     "
                     class="alert alert-warning"
                   >
                     <!--required-->
                     <div
-                      *ngIf="formValue.get('greeting')?.errors?.['required']"
+                      *ngIf="formValuePresentation.get('greeting')?.errors?.['required']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>Text is
@@ -105,7 +105,7 @@
                     </div>
                     <!--min length-->
                     <div
-                      *ngIf="formValue.get('greeting')?.errors?.['minlength']"
+                      *ngIf="formValuePresentation.get('greeting')?.errors?.['minlength']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>Text must
@@ -114,7 +114,7 @@
                     </div>
                     <!--max length-->
                     <div
-                      *ngIf="formValue.get('greeting')?.errors?.['maxlength']"
+                      *ngIf="formValuePresentation.get('greeting')?.errors?.['maxlength']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>Text must
@@ -143,27 +143,33 @@
                 <div>
                   <div
                     *ngIf="
-                      formValue.get('name')?.invalid &&
-                      formValue.get('name')?.touched
+                      formValuePresentation.get('name')?.invalid &&
+                      formValuePresentation.get('name')?.touched
                     "
                     class="alert alert-warning"
                   >
                     <!--required-->
-                    <div *ngIf="formValue.get('name')?.errors?.['required']">
+                    <div
+                      *ngIf="formValuePresentation.get('name')?.errors?.['required']"
+                    >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>The name is
                         required
                       </p>
                     </div>
                     <!--min length-->
-                    <div *ngIf="formValue.get('name')?.errors?.['minlength']">
+                    <div
+                      *ngIf="formValuePresentation.get('name')?.errors?.['minlength']"
+                    >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i> The name
                         must be at least 5 characters long
                       </p>
                     </div>
                     <!--max length-->
-                    <div *ngIf="formValue.get('name')?.errors?.['maxlength']">
+                    <div
+                      *ngIf="formValuePresentation.get('name')?.errors?.['maxlength']"
+                    >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>The name
                         must be less than 25 characters long
@@ -191,14 +197,14 @@
                 <div>
                   <div
                     *ngIf="
-                      formValue.get('position')?.invalid &&
-                      formValue.get('position')?.touched
+                      formValuePresentation.get('position')?.invalid &&
+                      formValuePresentation.get('position')?.touched
                     "
                     class="alert alert-warning"
                   >
                     <!--required-->
                     <div
-                      *ngIf="formValue.get('position')?.errors?.['required']"
+                      *ngIf="formValuePresentation.get('position')?.errors?.['required']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>The
@@ -207,7 +213,7 @@
                     </div>
                     <!--min length-->
                     <div
-                      *ngIf="formValue.get('position')?.errors?.['minlength']"
+                      *ngIf="formValuePresentation.get('position')?.errors?.['minlength']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i> The
@@ -216,7 +222,7 @@
                     </div>
                     <!--max length-->
                     <div
-                      *ngIf="formValue.get('position')?.errors?.['maxlength']"
+                      *ngIf="formValuePresentation.get('position')?.errors?.['maxlength']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>The
@@ -245,14 +251,14 @@
                 <div>
                   <div
                     *ngIf="
-                      formValue.get('ubication')?.invalid &&
-                      formValue.get('ubication')?.touched
+                      formValuePresentation.get('ubication')?.invalid &&
+                      formValuePresentation.get('ubication')?.touched
                     "
                     class="alert alert-warning"
                   >
                     <!--required-->
                     <div
-                      *ngIf="formValue.get('ubication')?.errors?.['required']"
+                      *ngIf="formValuePresentation.get('ubication')?.errors?.['required']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>The
@@ -261,7 +267,7 @@
                     </div>
                     <!--min length-->
                     <div
-                      *ngIf="formValue.get('ubication')?.errors?.['minlength']"
+                      *ngIf="formValuePresentation.get('ubication')?.errors?.['minlength']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i> The
@@ -270,7 +276,7 @@
                     </div>
                     <!--max length-->
                     <div
-                      *ngIf="formValue.get('ubication')?.errors?.['maxlength']"
+                      *ngIf="formValuePresentation.get('ubication')?.errors?.['maxlength']"
                     >
                       <p>
                         <i class="bi bi-exclamation-circle-fill"></i>The
@@ -296,7 +302,7 @@
                 type="button"
                 class="btn btn-success"
                 data-bs-dismiss="modal"
-                [disabled]="formValue.invalid"
+                [disabled]="formValuePresentation.invalid"
               >
                 Add
               </button>
@@ -306,7 +312,7 @@
                 type="submit"
                 class="btn btn-primary"
                 data-bs-dismiss="modal"
-                [disabled]="formValue.invalid"
+                [disabled]="formValuePresentation.invalid"
               >
                 Update
               </button>
@@ -320,20 +326,111 @@
         <div class="img-bg">
           <img [attr.src]="myImage" />
         </div>
-        <!--button change  <div class="container">-->
 
-        <!--buttons changes and delete features-->
-
+        <!--buttons changes, add and delete features-->
         <div class="container">
           <div class="btn-change">
-            <button href="#" class="btn btn-primary">
+            <button
+              class="btn btn-primary"
+              (click)="update()"
+              data-bs-toggle="modal"
+              data-bs-target="#presentationImgModal"
+            >
               <i class="bi bi-pencil-fill"></i>
             </button>
-            <button href="#" class="btn btn-primary">
+            <button class="btn btn-primary">
               <i class="bi bi-trash3-fill"></i>
+            </button>
+            <button
+              class="btn btn-primary"
+              (click)="add()"
+              data-bs-toggle="modal"
+              data-bs-target="#presentationImgModal"
+            >
+              <i class="bi bi-plus-circle"></i>
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit image presentation-->
+<div
+  class="modal fade"
+  id="presentationImgModal"
+  tabindex="-1"
+  aria-labelledby="presentationImgModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div style="background-color: #d4cbdd" class="modal-header">
+        <h1 class="modal-title fs-5" id="presentationImgModalLabel">
+          Edit: Image Presentation
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!--form-->
+      <div class="modal-body">
+        <form [formGroup]="formValueImg">
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Image</label>
+            <input class="form-control" type="file" id="formFile" />
+          </div>
+
+          <!--validation img-->
+
+          <div
+            *ngIf="
+              formValueImg.get('image')?.invalid &&
+              formValueImg.get('image')?.touched
+            "
+            class="alert alert-warning"
+          >
+            <!--required-->
+            <div *ngIf="formValueImg.get('image')?.errors?.['required']">
+              <p>
+                <i class="bi bi-exclamation-circle-fill"></i>The image is
+                required
+              </p>
+            </div>
+            <div *ngIf="formValueImg.pending">Validating...</div>
+          </div>
+        </form>
+      </div>
+
+      <!--logical btn-->
+      <div style="background-color: #d4cbdd" class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          *ngIf="showadd"
+          type="button"
+          class="btn btn-success"
+          data-bs-dismiss="modal"
+          [disabled]="formValueImg.invalid"
+        >
+          Add
+        </button>
+
+        <button
+          *ngIf="showupdate"
+          type="submit"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [disabled]="formValueImg.invalid"
+        >
+          Update
+        </button>
       </div>
     </div>
   </div>

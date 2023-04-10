@@ -8,6 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./presentation.component.css'],
 })
 export class PresentationComponent implements OnInit {
+  //json data
   myPresentation: any;
 
   myImage = '../../../../assets/img/third-img.png';
@@ -16,8 +17,8 @@ export class PresentationComponent implements OnInit {
   showadd!: boolean;
   showupdate!: boolean;
 
-  //form
-  formValue = new FormGroup({
+  //form presentation
+  formValuePresentation = new FormGroup({
     greeting: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
@@ -38,6 +39,11 @@ export class PresentationComponent implements OnInit {
       Validators.minLength(5),
       Validators.maxLength(50),
     ]),
+  });
+
+  //form img presentation
+  formValueImg = new FormGroup({
+    image: new FormControl('', [Validators.required]),
   });
 
   constructor(private datosPortfolio: PortfolioService) {}

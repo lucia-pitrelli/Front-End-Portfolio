@@ -5,15 +5,112 @@
       <div class="col">
         <img class="gif" [attr.src]="gifAbout" />
 
-        <!--buttons changes and delete features-->
+        <!--buttons changes, add and delete features-->
         <div class="container">
           <div class="btn-change">
-            <button href="#" class="btn btn-primary">
+            <button
+              class="btn btn-primary"
+              (click)="update()"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutGifModal"
+            >
               <i class="bi bi-pencil-fill"></i>
             </button>
-            <button href="#" class="btn btn-primary">
+            <button class="btn btn-primary">
               <i class="bi bi-trash3-fill"></i>
             </button>
+            <button
+              class="btn btn-primary"
+              (click)="add()"
+              data-bs-toggle="modal"
+              data-bs-target="#aboutGifModal"
+            >
+              <i class="bi bi-plus-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Edit image/ gif about me-->
+      <div
+        class="modal fade"
+        id="aboutGifModal"
+        tabindex="-1"
+        aria-labelledby="aboutGifModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div style="background-color: #d4cbdd" class="modal-header">
+              <h1 class="modal-title fs-5" id="aboutGifModalLabel">
+                Edit: Gif About me
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--form-->
+            <div class="modal-body">
+              <form [formGroup]="formValueGif">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Gif</label>
+                  <input class="form-control" type="file" id="formFile" />
+                </div>
+
+                <!--validation gif/img-->
+
+                <div
+                  *ngIf="
+                    formValueGif.get('gif')?.invalid &&
+                    formValueGif.get('gif')?.touched
+                  "
+                  class="alert alert-warning"
+                >
+                  <!--required-->
+                  <div *ngIf="formValueGif.get('gif')?.errors?.['required']">
+                    <p>
+                      <i class="bi bi-exclamation-circle-fill"></i>The gif is
+                      required
+                    </p>
+                  </div>
+                  <div *ngIf="formValueGif.pending">Validating...</div>
+                </div>
+              </form>
+            </div>
+
+            <!--logical btn-->
+            <div style="background-color: #d4cbdd" class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                *ngIf="showadd"
+                type="button"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+                [disabled]="formValueGif.invalid"
+              >
+                Add
+              </button>
+
+              <button
+                *ngIf="showupdate"
+                type="submit"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                [disabled]="formValueGif.invalid"
+              >
+                Update
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -63,18 +160,18 @@
   </div>
 </div>
 
-<!-- Modal Edit-->
+<!-- Modal Edit about me-->
 <div
   class="modal fade"
   id="aboutMeModal"
   tabindex="-1"
-  aria-labelledby="exampleModalLabel"
+  aria-labelledby="aboutMeModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog">
     <div class="modal-content">
       <div style="background-color: #d4cbdd" class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit: About me</h1>
+        <h1 class="modal-title fs-5" id="aboutMeModalLabel">Edit: About me</h1>
         <button
           type="button"
           class="btn-close"

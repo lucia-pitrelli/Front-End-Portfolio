@@ -16,9 +16,7 @@ export class AboutComponent implements OnInit {
   showadd!: boolean;
   showupdate!: boolean;
 
-  // formValue!: FormGroup;
-
-  //form
+  //form about me text
   formValue = new FormGroup({
     description: new FormControl('', [
       Validators.required,
@@ -27,7 +25,10 @@ export class AboutComponent implements OnInit {
     ]),
   });
 
-  // private formBuilder: FormBuilder no lo coloco en constructor
+  //form gif about me
+  formValueGif = new FormGroup({
+    gif: new FormControl('', [Validators.required]),
+  });
 
   constructor(private datosPortfolio: PortfolioService) {}
 
@@ -36,9 +37,6 @@ export class AboutComponent implements OnInit {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log(data);
       this.aboutMe = data.about; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
-
-      //  this.formValue = this.formBuilder.group({
-      //  description: ['', Validators.required],
     });
   }
 
