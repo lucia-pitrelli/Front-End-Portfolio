@@ -21,7 +21,8 @@ export class AboutComponent implements OnInit {
   formValue = new FormGroup({
     description: new FormControl('', [
       Validators.required,
-      Validators.maxLength(300),
+      Validators.minLength(10),
+      Validators.maxLength(200),
     ]),
   });
 

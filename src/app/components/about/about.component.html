@@ -53,7 +53,7 @@
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                 >
-                  +
+                  <i class="bi bi-plus-circle"></i>
                 </button>
               </div>
             </div>
@@ -105,9 +105,32 @@
                   formValue.get('description')?.invalid &&
                   formValue.get('description')?.touched
                 "
+                class="alert alert-warning"
               >
+                <!--required-->
                 <div *ngIf="formValue.get('description')?.errors?.['required']">
-                  <p>Description is required</p>
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Description is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValue.get('description')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Description
+                    must be at least 10 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValue.get('description')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Description
+                    must be less than 250 characters long
+                  </p>
                 </div>
               </div>
             </div>
