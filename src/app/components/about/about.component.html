@@ -36,16 +36,109 @@
             <!--buttons changes and delete features-->
             <div class="container">
               <div class="btn-change">
-                <button href="#" class="btn btn-primary">
+                <button
+                  class="btn btn-primary"
+                  (click)="update()"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
                   <i class="bi bi-pencil-fill"></i>
                 </button>
-                <button href="#" class="btn btn-primary">
+                <button class="btn btn-primary">
                   <i class="bi bi-trash3-fill"></i>
+                </button>
+                <button
+                  class="btn btn-primary"
+                  (click)="add()"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  +
                 </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit-->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div style="background-color: #d4cbdd" class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit: About me</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!--form-->
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="row mb-3">
+            <label for="colFormLabel" class="col-sm-2 col-form-label"
+              >Text</label
+            >
+            <div class="col-sm-10">
+              <textarea
+                type="text"
+                formControlName="description"
+                class="form-control"
+                id="colFormLabel"
+              ></textarea>
+            </div>
+            <!--validation text-->
+            <div>
+              <div
+                *ngIf="
+                  formValue.get('description')?.invalid &&
+                  formValue.get('description')?.touched
+                "
+              >
+                <div *ngIf="formValue.get('description')?.errors?.['required']">
+                  <p>Description is required</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--logical btn-->
+      <div style="background-color: #d4cbdd" class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          *ngIf="showadd"
+          type="button"
+          class="btn btn-success"
+          data-bs-dismiss="modal"
+          [disabled]="formValue.invalid"
+        >
+          Add
+        </button>
+
+        <button
+          *ngIf="showupdate"
+          type="submit"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [disabled]="formValue.invalid"
+        >
+          Update
+        </button>
       </div>
     </div>
   </div>
