@@ -18,6 +18,7 @@ export class AboutComponent implements OnInit {
 
   // formValue!: FormGroup;
 
+  //form
   formValue = new FormGroup({
     description: new FormControl('', [
       Validators.required,

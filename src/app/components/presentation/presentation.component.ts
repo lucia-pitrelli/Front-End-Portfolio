@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-presentation',
@@ -11,6 +12,34 @@ export class PresentationComponent implements OnInit {
 
   myImage = '../../../../assets/img/third-img.png';
 
+  //modal btn hide
+  showadd!: boolean;
+  showupdate!: boolean;
+
+  //form
+  formValue = new FormGroup({
+    greeting: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(25),
+    ]),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(25),
+    ]),
+    position: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(35),
+    ]),
+    ubication: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(50),
+    ]),
+  });
+
   constructor(private datosPortfolio: PortfolioService) {}
 
   //suscribe para utilizar el data.json
@@ -19,5 +48,17 @@ export class PresentationComponent implements OnInit {
       console.log('funciona presentacion', data);
       this.myPresentation = data.banner;
     });
+  }
+
+  //hide btn add
+  add() {
+    this.showadd = true;
+    this.showupdate = false;
+  }
+
+  //hide btn update
+  update() {
+    this.showadd = false;
+    this.showupdate = true;
   }
 }

@@ -62,3 +62,8 @@ i {
 .btn-update i {
   padding: 3px;
 }
+
+/*alert validation*/
+.alert {
+  padding: 0px;
+}

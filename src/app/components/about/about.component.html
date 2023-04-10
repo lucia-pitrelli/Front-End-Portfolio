@@ -1,11 +1,10 @@
-<!--1 page more: form - change and routing-->
-
 <!--gif-->
 <div class="container-about" id="about">
   <div class="container text-center">
     <div class="row">
       <div class="col">
         <img class="gif" [attr.src]="gifAbout" />
+
         <!--buttons changes and delete features-->
         <div class="container">
           <div class="btn-change">
@@ -33,14 +32,14 @@
               </p>
             </div>
 
-            <!--buttons changes and delete features-->
+            <!--buttons changes, add and delete features-->
             <div class="container">
               <div class="btn-change">
                 <button
                   class="btn btn-primary"
                   (click)="update()"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#aboutMeModal"
                 >
                   <i class="bi bi-pencil-fill"></i>
                 </button>
@@ -51,7 +50,7 @@
                   class="btn btn-primary"
                   (click)="add()"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#aboutMeModal"
                 >
                   <i class="bi bi-plus-circle"></i>
                 </button>
@@ -67,7 +66,7 @@
 <!-- Modal Edit-->
 <div
   class="modal fade"
-  id="exampleModal"
+  id="aboutMeModal"
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
