@@ -51,7 +51,7 @@ export class PresentationComponent implements OnInit {
   //suscribe para utilizar el data.json
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log('funciona presentacion', data);
+      //console.log('funciona presentacion', data);
       this.myPresentation = data.banner;
     });
   }

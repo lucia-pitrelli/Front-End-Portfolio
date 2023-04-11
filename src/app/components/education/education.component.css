@@ -65,3 +65,14 @@
   color: var(--main-icons-color);
   text-align: center;
 }
+
+/*button update features*/
+
+.btn-update i {
+  padding-left: 3px;
+}
+
+/*alert validation*/
+.alert {
+  padding: 0px;
+}

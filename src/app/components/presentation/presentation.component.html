@@ -383,7 +383,12 @@
         <form [formGroup]="formValueImg">
           <div class="mb-3">
             <label for="formFile" class="form-label">Image</label>
-            <input class="form-control" type="file" id="formFile" />
+            <input
+              class="form-control"
+              formControlName="image"
+              type="file"
+              id="formFile"
+            />
           </div>
 
           <!--validation img-->

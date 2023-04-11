@@ -1,3 +1,4 @@
+<!--test login working-->
 <div>
   <button type="button" (click)="mostrar = !mostrar">Mostrar/ocultar</button>
 </div>
@@ -8,15 +9,19 @@
 </div>
 
 <!--button add project-->
-<div class="btn">
-  <button class="style-btn" type="button" *ngIf="mostrar">
-    <i class="bi bi-plus-circle-fill"></i
-    ><a href="/addProject"> Add a new Project</a>
+<div *ngIf="mostrar">
+  <button
+    class="btn btn-primary"
+    (click)="add()"
+    data-bs-toggle="modal"
+    data-bs-target="#projectModal"
+  >
+    <i class="bi bi-plus-circle">Add new Project</i>
   </button>
 </div>
 
 <!--List of projects-->
-<!--data binding de interpolacion-->
+<!--data binding: interpolacion-->
 
 <section class="listProjects">
   <div class="container-project">
@@ -37,25 +42,86 @@
               </p>
               <p class="card-text">Date: {{ project.date }}</p>
 
-              <!--button see the project-->
-              <div class="btn-project">
-                <a href="/project/:id" class="btn btn-secondary">
-                  See the Project <i class="bi bi-arrow-right-circle-fill"></i
-                ></a>
-              </div>
-              <!--buttons changes and delete project-->
-              <div class="btn-change" *ngIf="mostrar">
-                <a href="#" class="btn btn-primary"
-                  ><i class="bi bi-pencil-fill"></i
-                ></a>
-                <a href="#" class="btn btn-primary" *ngIf="mostrar"
-                  ><i class="bi bi-trash3-fill"></i
-                ></a>
+              <!--buttons changes and delete features-->
+              <div class="container" *ngIf="mostrar">
+                <div class="btn-update">
+                  <button
+                    class="btn btn-primary"
+                    (click)="update()"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal"
+                  >
+                    <i class="bi bi-pencil-fill"></i>
+                  </button>
+                  <button class="btn btn-primary">
+                    <i class="bi bi-trash3-fill"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Edit-->
+<section>
+  <div
+    class="modal fade"
+    id="projectModal"
+    tabindex="-1"
+    aria-labelledby="projectModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: #d4cbdd" class="modal-header">
+          <h1 class="modal-title fs-5" id="projectModalLabel">Edit: Project</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!--form-->
+    <div class="modal-body">
+      <form [formGroup]="formValueProject">
+        <!--image-->
+        <div class="row mb-3">
+          <label for="formFile" class="form-label">Image</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              formControlName="image"
+              type="file"
+              id="formFile"
+            />
+          </div>
+        </div>
+
+        <!--validation gif/img-->
+        <div
+          *ngIf="
+            formValueProject.get('gif')?.invalid &&
+            formValueProject.get('gif')?.touched
+          "
+          class="alert alert-warning"
+        >
+          <!--required-->
+          <div *ngIf="formValueProject.get('gif')?.errors?.['required']">
+            <p>
+              <i class="bi bi-exclamation-circle-fill"></i>The Image is required
+            </p>
+          </div>
+          <div *ngIf="formValueProject.pending">Validating...</div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
