@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-skills',
@@ -7,11 +8,32 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent implements OnInit {
+  //json data
   mySkills: any;
   listOfSkills: any;
-  //percentage: number = 10;
 
-  //n = 15;
+  //modal btn hide
+  showadd!: boolean;
+  showupdate!: boolean;
+
+  //form soft Skills
+  formValueSoftSkill = new FormGroup({
+    softSkill: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(500),
+    ]),
+  });
+
+  //form Hard Skills
+  formValueHardSkill = new FormGroup({
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(1),
+      Validators.maxLength(20),
+    ]),
+    percentage: new FormControl('', [Validators.required]),
+  });
 
   constructor(private datosPortfolio: PortfolioService) {}
 
@@ -25,21 +47,15 @@ export class SkillsComponent implements OnInit {
     });
   }
 
-  /* onProgress(side: number) {
-    //implementation of limitations of progress bar
-    if (this.percentage <= 10) {
-      this.percentage = 15;
-    }
-    if (this.percentage >= 100) {
-      this.percentage = 95;
-    }
-    // add value to progress bar, 5 to 5
-    if (side) {
-      //plus
-      this.percentage += 5;
-    } else {
-      //minus
-      this.percentage -= 5;
-    }
-  }*/
+  //hide btn add
+  add() {
+    this.showadd = true;
+    this.showupdate = false;
+  }
+
+  //hide btn update
+  update() {
+    this.showadd = false;
+    this.showupdate = true;
+  }
 }
