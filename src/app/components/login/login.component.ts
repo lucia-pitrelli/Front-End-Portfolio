@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 //import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,17 +9,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
+  //form login
+  formValueLogin = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
+  });
 
-  //inyecta en el constructor el formbuilder
+  constructor(private router: Router) {}
 
-  constructor(private formBuilder: FormBuilder) {
-    //controllers form login component
-    this.form = this.formBuilder.group({
-      email: ['', []],
-      password: ['', []],
-    });
-    //console.log('ver usuario', this.form);
+  handlerClick() {
+    this.router.navigate(['/']);
   }
 
   ngOnInit(): void {}

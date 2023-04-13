@@ -1,53 +1,81 @@
 <app-header></app-header>
 
+<!--change color SPA-->
 <div class="dark-btn">
   <button (click)="toggleDarkTheme()">
     <i class="bi bi-toggles"></i> Light/Dark
   </button>
 </div>
 
+<!--form login-->
 <div class="container-login">
-  <!--title-->
   <div class="shadow-lg p-3 rounded">
-    <div class="title-login">
-      <p>Login to change data</p>
-    </div>
-
-    <!--form
+    <!--
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
      
      Email input -->
-    <form [formGroup]="form">
+
+    <form [formGroup]="formValueLogin">
       <div class="form-outline mb-4">
+        <div class="title-login">
+          <label for="colFormLabel" class="col-sm-2 col-form-label"
+            >Login</label
+          >
+        </div>
         <input
           type="email"
-          id="form2Example1"
+          formControlName="email"
           class="form-control"
           placeholder="Email"
         />
-        <label class="form-label" for="form2Example1"></label>
+        <label class="form-label" for="loginForm"></label>
       </div>
-      <!--Error email-->
-      <div class="error">
-        <p>The email isn't valid</p>
-        <p>The email is required</p>
+
+      <!--Validation email-->
+      <div>
+        <div
+          *ngIf="
+            formValueLogin.get('email')?.invalid &&
+            formValueLogin.get('email')?.touched
+          "
+          class="alert alert-warning"
+        >
+          <!--required-->
+          <div *ngIf="formValueLogin.get('email')?.errors?.['required']">
+            <p>
+              <i class="bi bi-exclamation-circle-fill"></i>Email is required
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
         <input
           type="password"
-          id="form2Example2"
+          formControlName="password"
           class="form-control"
           placeholder="Password"
         />
-        <label class="form-label" for="form2Example2"></label>
+        <label class="form-label" for="loginForm"></label>
       </div>
 
-      <!--Error password-->
-      <div class="error">
-        <p>The password isn't valid</p>
-        <p>The password is required</p>
+      <!--Validation password-->
+      <div>
+        <div
+          *ngIf="
+            formValueLogin.get('password')?.invalid &&
+            formValueLogin.get('password')?.touched
+          "
+          class="alert alert-warning"
+        >
+          <!--required-->
+          <div *ngIf="formValueLogin.get('password')?.errors?.['required']">
+            <p>
+              <i class="bi bi-exclamation-circle-fill"></i>Password is required
+            </p>
+          </div>
+        </div>
       </div>
 
       <!--submit button-->
@@ -62,5 +90,7 @@
     </form>
   </div>
 </div>
+
+<button class="btn btn-warning" (click)="handlerClick()">Ir a Home</button>
 
 <app-footer></app-footer>

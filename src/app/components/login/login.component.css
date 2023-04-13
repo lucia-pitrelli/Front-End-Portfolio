@@ -28,10 +28,9 @@
   background-color: var(--sixth-bg-color);
 }
 
-/*error message*/
-.error {
-  color: red;
-  font-weight: bold;
+/*alert validation*/
+.alert {
+  padding: 0px;
 }
 
 /*dark theme background*/
