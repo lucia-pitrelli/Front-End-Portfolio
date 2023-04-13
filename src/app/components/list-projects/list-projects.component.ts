@@ -23,6 +23,21 @@ export class ListProjectsComponent implements OnInit {
   //form project
   formValueProject = new FormGroup({
     image: new FormControl('', [Validators.required]),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(25),
+    ]),
+    details: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(60),
+    ]),
+    date: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(20),
+    ]),
   });
 
   constructor(private datosPortfolio: PortfolioService) {}
