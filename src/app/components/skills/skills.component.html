@@ -126,56 +126,57 @@
         <!--form-->
         <div class="modal-body">
           <form [formGroup]="formValueSoftSkill">
-            <!--Soft Skills-->
+            <!--Soft Skills title-->
             <div class="row mb-3">
               <label for="colFormLabel" class="col-sm-2 col-form-label"
                 >Soft Skills</label
               >
+              <!--softSkill input-->
               <div class="col-sm-10">
-                <input
+                <textarea
                   type="text"
                   formControlName="softSkill"
                   class="form-control"
                   id="colFormLabel"
-                />
+                ></textarea>
               </div>
-            </div>
 
-            <!--validation Soft Skills-->
-            <div>
-              <div
-                *ngIf="
-                  formValueSoftSkill.get('softSkill')?.invalid &&
-                  formValueSoftSkill.get('softSkill')?.touched
-                "
-                class="alert alert-warning"
-              >
-                <!--required-->
+              <!--validation Soft Skills-->
+              <div>
                 <div
-                  *ngIf="formValueSoftSkill.get('softSkill')?.errors?.['required']"
+                  *ngIf="
+                    formValueSoftSkill.get('softSkill')?.invalid &&
+                    formValueSoftSkill.get('softSkill')?.touched
+                  "
+                  class="alert alert-warning"
                 >
-                  <p>
-                    <i class="bi bi-exclamation-circle-fill"></i>Details of Soft
-                    Skill are required
-                  </p>
-                </div>
-                <!--min length-->
-                <div
-                  *ngIf="formValueSoftSkill.get('softSkill')?.errors?.['minlength']"
-                >
-                  <p>
-                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
-                    least 3 characters long
-                  </p>
-                </div>
-                <!--max length-->
-                <div
-                  *ngIf="formValueSoftSkill.get('softSkill')?.errors?.['maxlength']"
-                >
-                  <p>
-                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
-                    less than 500 characters long
-                  </p>
+                  <!--required-->
+                  <div
+                    *ngIf="formValueSoftSkill.get('softSkill')?.errors?.['required']"
+                  >
+                    <p>
+                      <i class="bi bi-exclamation-circle-fill"></i>Details of
+                      Soft Skill are required
+                    </p>
+                  </div>
+                  <!--min length-->
+                  <div
+                    *ngIf="formValueSoftSkill.get('softSkill')?.errors?.['minlength']"
+                  >
+                    <p>
+                      <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                      at least 3 characters long
+                    </p>
+                  </div>
+                  <!--max length-->
+                  <div
+                    *ngIf="formValueSoftSkill.get('softSkill')?.errors?.['maxlength']"
+                  >
+                    <p>
+                      <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                      less than 500 characters long
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
