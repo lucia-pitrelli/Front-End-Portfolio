@@ -12,8 +12,16 @@ export class LoginComponent implements OnInit {
   //form login
   formValueLogin = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+    ]),
   });
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.formValueLogin.value);
+  }
 
   constructor(private router: Router) {}
 

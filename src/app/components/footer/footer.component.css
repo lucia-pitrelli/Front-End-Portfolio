@@ -13,7 +13,15 @@
   color: var(--third-text-color);
 }
 
+/*image yo programo*/
+
 #img-arg img {
   width: 150px;
   height: 50px;
+}
+
+/*icons*/
+section ul {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -14,7 +14,6 @@ export class PresentationComponent implements OnInit {
   myImage = '../../../../assets/img/third-img.png';
 
   //modal btn hide
-  showadd!: boolean;
   showupdate!: boolean;
 
   //form presentation
@@ -56,15 +55,8 @@ export class PresentationComponent implements OnInit {
     });
   }
 
-  //hide btn add
-  add() {
-    this.showadd = true;
-    this.showupdate = false;
-  }
-
   //hide btn update
   update() {
-    this.showadd = false;
     this.showupdate = true;
   }
 }

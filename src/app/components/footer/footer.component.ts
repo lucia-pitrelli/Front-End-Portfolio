@@ -8,5 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   logoAp = '../../../assets/img/APLogo.png';
 
+  //modal btn hide
+
+  showupdate!: boolean;
+
   ngOnInit(): void {}
+
+  //hide btn update
+  update() {
+    this.showupdate = true;
+  }
 }

@@ -15,7 +15,7 @@
      
      Email input -->
 
-    <form [formGroup]="formValueLogin">
+    <form [formGroup]="formValueLogin" (ngSubmit)="onSubmit()">
       <div class="form-outline mb-4">
         <div class="title-login">
           <label for="colFormLabel" class="col-sm-2 col-form-label"
@@ -75,11 +75,23 @@
               <i class="bi bi-exclamation-circle-fill"></i>Password is required
             </p>
           </div>
+
+          <!--min length-->
+          <div *ngIf="formValueLogin.get('name')?.errors?.['minlength']">
+            <p>
+              <i class="bi bi-exclamation-circle-fill"></i> The password must be
+              at least 8 characters long
+            </p>
+          </div>
         </div>
       </div>
 
       <!--submit button-->
-      <button type="submit" class="btn btn-primary btn-block mb-4">
+      <button
+        type="submit"
+        [disabled]="!formValueLogin.valid"
+        class="btn btn-primary btn-block mb-4"
+      >
         Sign in
       </button>
 
