@@ -137,7 +137,13 @@
           </div>
         </div>
 
-        <button class="btn btn-info" type="submit">Send</button>
+        <button
+          class="btn btn-info"
+          type="submit"
+          [disabled]="formValueContact.invalid"
+        >
+          Send
+        </button>
       </div>
     </form>
   </div>
