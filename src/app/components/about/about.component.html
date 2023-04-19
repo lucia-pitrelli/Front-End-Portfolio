@@ -49,12 +49,15 @@
             <div class="modal-body">
               <form [formGroup]="formValueGif">
                 <div class="mb-3">
-                  <label for="formFile" class="form-label">Gif</label>
+                  <!--current gif-->
+                  <label for="formFile" class="form-label"
+                    ><img class="gif" [attr.src]="gifAbout"
+                  /></label>
+                  <!--input gif-->
                   <input class="form-control" type="file" id="formFile" />
                 </div>
 
                 <!--validation gif/img-->
-
                 <div
                   *ngIf="
                     formValueGif.get('gif')?.invalid &&
@@ -166,7 +169,8 @@
                 formControlName="description"
                 class="form-control"
                 id="colFormLabel"
-              ></textarea>
+              >
+              </textarea>
             </div>
             <!--validation text-->
             <div>

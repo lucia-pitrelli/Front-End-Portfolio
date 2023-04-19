@@ -9,7 +9,6 @@ export class FooterComponent implements OnInit {
   logoAp = '../../../assets/img/APLogo.png';
 
   //modal btn hide
-
   showupdate!: boolean;
 
   ngOnInit(): void {}

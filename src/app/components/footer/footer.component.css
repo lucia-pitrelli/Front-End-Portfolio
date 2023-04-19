@@ -1,16 +1,12 @@
-.navStyle {
+.feautersIcons {
   padding: 20px;
   font-size: 25px;
   color: var(--third-text-color);
   font-weight: bold;
 }
 
-.containerColor {
+.bgColorFooter {
   background-color: var(--fourth-bg-color);
-}
-
-.nav-link {
-  color: var(--third-text-color);
 }
 
 /*image yo programo*/
@@ -20,8 +16,8 @@
   height: 50px;
 }
 
-/*icons*/
+/*icons
 section ul {
   display: flex;
   justify-content: flex-end;
-}
+}*/

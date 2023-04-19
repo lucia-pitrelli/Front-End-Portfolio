@@ -1,11 +1,15 @@
+//modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+//import { AngularFireModule } from '@angular/fire/compat';
 
+//app component
 import { AppComponent } from './app.component';
 
+//components
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
@@ -27,6 +31,7 @@ import { AddAboutComponent } from './components/modals/add-about/add-about.compo
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ButtonLoginComponent } from './components/button-login/button-login.component';
 import { ButtonLogoutComponent } from './components/button-logout/button-logout.component';
+//import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
