@@ -5,9 +5,9 @@
     <div class="row align-items-center">
       <div class="col" *ngFor="let presentation of myPresentation">
         <div class="title-presentation">
-          <h1>{{ presentation.greeting }}</h1>
+          <h1>{{ greeting }}</h1>
           <div>
-            <h1>{{ presentation.name }}</h1>
+            <h1>{{ presentation.fullName }}</h1>
           </div>
         </div>
         <div class="text-presentation">
@@ -89,217 +89,170 @@
       <!--form-->
       <div class="modal-body">
         <form [formGroup]="formValuePresentation">
-          <!--greeting-->
-          <div class="row mb-3">
-            <label for="colFormLabel" class="col-sm-2 col-form-label"
-              >Text</label
-            >
-            <div class="col-sm-10">
-              <input
-                type="text"
-                formControlName="greeting"
-                class="form-control"
-                id="colFormLabel"
-              />
-            </div>
-          </div>
+          <div *ngFor="let presentation of myPresentation">
+            <!--fullName-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Name</label
+              >
 
-          <!--validation greeting-->
-          <div>
-            <div
-              *ngIf="
-                formValuePresentation.get('greeting')?.invalid &&
-                formValuePresentation.get('greeting')?.touched
-              "
-              class="alert alert-warning"
-            >
-              <!--required-->
-              <div
-                *ngIf="formValuePresentation.get('greeting')?.errors?.['required']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>Text is required
-                </p>
-              </div>
-              <!--min length-->
-              <div
-                *ngIf="formValuePresentation.get('greeting')?.errors?.['minlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>Text must be at
-                  least 5 characters long
-                </p>
-              </div>
-              <!--max length-->
-              <div
-                *ngIf="formValuePresentation.get('greeting')?.errors?.['maxlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>Text must be less
-                  than 25 characters long
-                </p>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="fullName"
+                  class="form-control"
+                  id="colFormLabel"
+                  [(ngModel)]="presentation.fullName"
+                />
               </div>
             </div>
-          </div>
 
-          <!--name-->
-          <div class="row mb-3">
-            <label for="colFormLabel" class="col-sm-2 col-form-label"
-              >Name</label
-            >
-            <div class="col-sm-10">
-              <input
-                type="text"
-                formControlName="name"
-                class="form-control"
-                id="colFormLabel"
-              />
-            </div>
-          </div>
-
-          <!--validation name-->
-          <div>
-            <div
-              *ngIf="
-                formValuePresentation.get('name')?.invalid &&
-                formValuePresentation.get('name')?.touched
-              "
-              class="alert alert-warning"
-            >
-              <!--required-->
+            <!--validation fullName-->
+            <div>
               <div
-                *ngIf="formValuePresentation.get('name')?.errors?.['required']"
+                *ngIf="
+                  formValuePresentation.get('fullName')?.invalid &&
+                  formValuePresentation.get('fullName')?.touched
+                "
+                class="alert alert-warning"
               >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>The name is
-                  required
-                </p>
-              </div>
-              <!--min length-->
-              <div
-                *ngIf="formValuePresentation.get('name')?.errors?.['minlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i> The name must be
-                  at least 5 characters long
-                </p>
-              </div>
-              <!--max length-->
-              <div
-                *ngIf="formValuePresentation.get('name')?.errors?.['maxlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>The name must be
-                  less than 25 characters long
-                </p>
+                <!--required-->
+                <div
+                  *ngIf="formValuePresentation.get('fullName')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The Full Name
+                    is required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValuePresentation.get('fullName')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> The Full Name
+                    must be at least 5 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValuePresentation.get('fullName')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The Full Name
+                    must be less than 25 characters long
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--position-->
-          <div class="row mb-3">
-            <label for="colFormLabel" class="col-sm-2 col-form-label"
-              >Position</label
-            >
-            <div class="col-sm-10">
-              <input
-                type="text"
-                formControlName="position"
-                class="form-control"
-                id="colFormLabel"
-              />
-            </div>
-          </div>
-
-          <!--validation position-->
-          <div>
-            <div
-              *ngIf="
-                formValuePresentation.get('position')?.invalid &&
-                formValuePresentation.get('position')?.touched
-              "
-              class="alert alert-warning"
-            >
-              <!--required-->
-              <div
-                *ngIf="formValuePresentation.get('position')?.errors?.['required']"
+            <!--position-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Position</label
               >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>The position is
-                  required
-                </p>
-              </div>
-              <!--min length-->
-              <div
-                *ngIf="formValuePresentation.get('position')?.errors?.['minlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i> The position
-                  must be at least 5 characters long
-                </p>
-              </div>
-              <!--max length-->
-              <div
-                *ngIf="formValuePresentation.get('position')?.errors?.['maxlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>The position must
-                  be less than 35 characters long
-                </p>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="position"
+                  class="form-control"
+                  id="colFormLabel"
+                  [(ngModel)]="presentation.position"
+                />
               </div>
             </div>
-          </div>
 
-          <!--ubication-->
-          <div class="row mb-3">
-            <label for="colFormLabel" class="col-sm-2 col-form-label"
-              >Ubication</label
-            >
-            <div class="col-sm-10">
-              <input
-                type="text"
-                formControlName="ubication"
-                class="form-control"
-                id="colFormLabel"
-              />
+            <!--validation position-->
+            <div>
+              <div
+                *ngIf="
+                  formValuePresentation.get('position')?.invalid &&
+                  formValuePresentation.get('position')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValuePresentation.get('position')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The position is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValuePresentation.get('position')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> The position
+                    must be at least 5 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValuePresentation.get('position')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The position
+                    must be less than 35 characters long
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!--validation ubication-->
-          <div>
-            <div
-              *ngIf="
-                formValuePresentation.get('ubication')?.invalid &&
-                formValuePresentation.get('ubication')?.touched
-              "
-              class="alert alert-warning"
-            >
-              <!--required-->
-              <div
-                *ngIf="formValuePresentation.get('ubication')?.errors?.['required']"
+            <!--ubication-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Ubication</label
               >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>The ubication is
-                  required
-                </p>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="ubication"
+                  class="form-control"
+                  id="colFormLabel"
+                  [(ngModel)]="presentation.ubication"
+                />
               </div>
-              <!--min length-->
+            </div>
+
+            <!--validation ubication-->
+            <div>
               <div
-                *ngIf="formValuePresentation.get('ubication')?.errors?.['minlength']"
+                *ngIf="
+                  formValuePresentation.get('ubication')?.invalid &&
+                  formValuePresentation.get('ubication')?.touched
+                "
+                class="alert alert-warning"
               >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i> The ubication
-                  must be at least 5 characters long
-                </p>
-              </div>
-              <!--max length-->
-              <div
-                *ngIf="formValuePresentation.get('ubication')?.errors?.['maxlength']"
-              >
-                <p>
-                  <i class="bi bi-exclamation-circle-fill"></i>The ubication
-                  must be less than 50 characters long
-                </p>
+                <!--required-->
+                <div
+                  *ngIf="formValuePresentation.get('ubication')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The ubication
+                    is required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValuePresentation.get('ubication')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> The ubication
+                    must be at least 5 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValuePresentation.get('ubication')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The ubication
+                    must be less than 50 characters long
+                  </p>
+                </div>
               </div>
             </div>
           </div>

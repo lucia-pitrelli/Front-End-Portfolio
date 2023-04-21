@@ -1,8 +1,8 @@
 {
-  "banner": [
+  "persona": [
     {
-      "greeting": "Hello, I'm",
-      "name": "Lucia B. Pitrelli",
+      "id": "1",
+      "fullName": "Lucia B. Pitrelli",
       "position": "Full Stack Developer Jr.",
       "ubication": "Based in Buenos Aires, Argentina."
     }
@@ -100,7 +100,7 @@
     { "id": 9, "name": "Scrum", "percentage": "40" }
   ],
 
-  "users": [
+  "user": [
     {
       "id": 1,
       "email": "pepito@gmail.com",

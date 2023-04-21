@@ -33,18 +33,14 @@
 
     <app-button-login></app-button-login>
     <div class="container-admin">
-      <ul>
-        <li>
-          <div class="title-welcome" *ngIf="login"><p>Welcome, Admin</p></div>
-        </li>
+      <div class="title-welcome" *ngIf="login"><p>Welcome, Admin</p></div>
 
-        <li>
+      <!---
           <div *ngIf="login">
             <button><a href="/dashboard"></a>Go Dashboard</button>
           </div>
-        </li>
-      </ul>
-      <!--- <div *ngIf="!login">
+   
+      <div *ngIf="!login">
 </div>
       -->
     </div>

@@ -11,19 +11,17 @@ export class PresentationComponent implements OnInit {
   //json data
   myPresentation: any;
 
+  //binding
   myImage = '../../../../assets/img/third-img.png';
+
+  greeting = 'Hello, I´m ';
 
   //modal btn hide
   showupdate!: boolean;
 
   //form presentation
   formValuePresentation = new FormGroup({
-    greeting: new FormControl('', [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(25),
-    ]),
-    name: new FormControl('', [
+    fullName: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
       Validators.maxLength(25),
@@ -51,7 +49,7 @@ export class PresentationComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       //console.log('funciona presentacion', data);
-      this.myPresentation = data.banner;
+      this.myPresentation = data.persona;
     });
   }
 
