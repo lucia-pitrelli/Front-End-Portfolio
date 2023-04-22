@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   //coloco modo oscuro
-  toggleDarkTheme(): void {
+  toggleSwitch(): void {
     document.body.classList.toggle('dark-theme');
   }
 }
