@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-not-found.component.css'],
 })
 export class PageNotFoundComponent implements OnInit {
-  image404 = '../../../assets/404.gif';
+  image404 = '../../../assets/img/404.gif';
 
   ngOnInit(): void {}
 }

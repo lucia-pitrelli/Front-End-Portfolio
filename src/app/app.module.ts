@@ -30,8 +30,6 @@ import { ChangeProjectComponent } from './components/modals/change-project/chang
 
 import { AddProjectComponent } from './components/modals/add-project/add-project.component';
 
-import { DeleteProjectComponent } from './components/modals/delete-project/delete-project.component';
-
 import { SkillsComponent } from './components/skills/skills.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -55,7 +53,6 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
     LoginComponent,
     ChangeProjectComponent,
     AddProjectComponent,
-    DeleteProjectComponent,
     SkillsComponent,
     PageNotFoundComponent,
     EducationComponent,
