@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   //form login
-  // formValueLogin: FormGroup;
 
   formValueLogin = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -27,12 +26,10 @@ export class LoginComponent implements OnInit {
 
   login() {
     //send data to firebase
-    const email = this.formValueLogin.value.email;
-    const password = this.formValueLogin.value.password;
-
+    // const email = this.formValueLogin.value.email;
+    // const password = this.formValueLogin.value.password;
     //show data in console
-    console.warn(this.formValueLogin.value);
-
+    //console.warn(this.formValueLogin.value);
     // this.afAuth
     //  .signInWithEmailAndPassword(email, password)
     // .then((user) => {
@@ -43,6 +40,7 @@ export class LoginComponent implements OnInit {
     //  });
   }
 
+  // home page
   handlerClick() {
     this.router.navigate(['/']);
   }

@@ -305,7 +305,9 @@
       <div class="modal-body">
         <form [formGroup]="formValueImg">
           <div class="mb-3">
-            <label for="formFile" class="form-label">Image</label>
+            <label for="formFile" class="form-label">
+              <img [attr.src]="myImage"
+            /></label>
             <input
               class="form-control"
               formControlName="image"

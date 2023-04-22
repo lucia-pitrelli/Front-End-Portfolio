@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ProjectComponent } from './components/project/project.component';
+
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { PortfolioService } from './services/portfolio.service'; //ver
@@ -26,7 +26,6 @@ const routes: Routes = [
     component: DashboardComponent,
   }, // visit home only if authenticated
 
-  { path: 'project/:id', component: ProjectComponent }, // no me salio
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
   //{ path: '', redirectTo: '', pathMatch: 'full' }, //funciona?
 ];

@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
-import { ProjectComponent } from './components/project/project.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -39,7 +39,7 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    ProjectComponent,
+
     HeaderComponent,
     PresentationComponent,
     FooterComponent,
