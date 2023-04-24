@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -15,20 +15,6 @@ export class AboutComponent implements OnInit {
   //modal btn hide
 
   showupdate!: boolean;
-
-  //form about me text
-  formValue = new FormGroup({
-    description: new FormControl('', [
-      Validators.required,
-      Validators.minLength(10),
-      Validators.maxLength(200),
-    ]),
-  });
-
-  //form gif about me
-  //formValueGif = new FormGroup({
-  // gif: new FormControl('', [Validators.required]),
-  //});
 
   constructor(private datosPortfolio: PortfolioService) {}
 

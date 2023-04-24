@@ -18,6 +18,15 @@ export class ChangeAboutComponent implements OnInit {
     gif: new FormControl('', [Validators.required]),
   });
 
+  //form about me text
+  formValue = new FormGroup({
+    description: new FormControl('', [
+      Validators.required,
+      Validators.minLength(10),
+      Validators.maxLength(200),
+    ]),
+  });
+
   constructor(private datosPortfolio: PortfolioService) {}
 
   //suscribe para utilizar el data.json
