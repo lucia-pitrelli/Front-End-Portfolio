@@ -1,16 +1,4 @@
-/*.dark-btn button {
-  margin-top: 30px;
-  margin-left: 39px;
-  padding: 7px;
-  font-size: 15px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--main-text-color);
-  background-color: var(--sixth-bg-color);
-  border-color: var(--secondary-text-color);
-  border-radius: 50%;
-}*/
-
-/* The switch - the box around the slider */
+/* The switch color theme */
 .switch {
   position: relative;
   display: inline-block;

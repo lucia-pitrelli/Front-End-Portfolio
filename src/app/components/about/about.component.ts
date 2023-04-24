@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms'; //FormBuilder lo saco
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -26,9 +26,9 @@ export class AboutComponent implements OnInit {
   });
 
   //form gif about me
-  formValueGif = new FormGroup({
-    gif: new FormControl('', [Validators.required]),
-  });
+  //formValueGif = new FormGroup({
+  // gif: new FormControl('', [Validators.required]),
+  //});
 
   constructor(private datosPortfolio: PortfolioService) {}
 

@@ -40,6 +40,11 @@ import { ButtonLoginComponent } from './components/button-login/button-login.com
 import { ButtonLogoutComponent } from './components/button-logout/button-logout.component';
 //import { environment } from 'src/environments/environment';
 
+//modals
+
+import { ChangeAboutComponent } from './components/modals/change-about/change-about.component';
+//import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +63,7 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
     EducationComponent,
     ButtonLoginComponent,
     ButtonLogoutComponent,
+    ChangeAboutComponent,
   ],
   imports: [
     BrowserModule,

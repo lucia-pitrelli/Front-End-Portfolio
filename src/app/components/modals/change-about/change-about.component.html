@@ -1,1 +1,70 @@
-<p>change-about works!</p>
+<!-- Modal Edit image/ gif about me-->
+<div
+  class="modal fade"
+  id="aboutGifModal"
+  tabindex="-1"
+  aria-labelledby="aboutGifModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div style="background-color: #d4cbdd" class="modal-header">
+        <h1 class="modal-title fs-5" id="aboutGifModalLabel">
+          Edit: Gif About me
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!--form-->
+      <div class="modal-body">
+        <form [formGroup]="formValueGif">
+          <div class="mb-3">
+            <!--current gif-->
+            <label for="formFile" class="form-label"
+              ><img class="gif" [attr.src]="gifAbout"
+            /></label>
+            <!--input gif-->
+            <input class="form-control" type="file" id="formFile" />
+          </div>
+
+          <!--validation gif/img-->
+          <div
+            *ngIf="
+              formValueGif.get('gif')?.invalid &&
+              formValueGif.get('gif')?.touched
+            "
+            class="alert alert-warning"
+          >
+            <!--required-->
+            <div *ngIf="formValueGif.get('gif')?.errors?.['required']">
+              <p>
+                <i class="bi bi-exclamation-circle-fill"></i>The gif is required
+              </p>
+            </div>
+            <div *ngIf="formValueGif.pending">Validating...</div>
+          </div>
+        </form>
+      </div>
+
+      <!--logical btn-->
+      <div style="background-color: #d4cbdd" class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [disabled]="formValueGif.invalid"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
