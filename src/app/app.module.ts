@@ -43,6 +43,9 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
 //modals
 
 import { ChangeAboutComponent } from './components/modals/change-about/change-about.component';
+
+import { ChangePresentationComponent } from './components/modals/change-presentation/change-presentation.component';
+
 //import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
 
 @NgModule({
@@ -64,6 +67,7 @@ import { ChangeAboutComponent } from './components/modals/change-about/change-ab
     ButtonLoginComponent,
     ButtonLogoutComponent,
     ChangeAboutComponent,
+    ChangePresentationComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,290 @@
-<p>change-presentation works!</p>
+<!-- Modal Edit text presentation-->
+<div
+  class="modal fade"
+  id="presentationModal"
+  tabindex="-1"
+  aria-labelledby="presentationModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div style="background-color: #d4cbdd" class="modal-header">
+        <h1 class="modal-title fs-5" id="presentationModalLabel">
+          Edit: Presentation
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!--form-->
+      <div class="modal-body">
+        <form [formGroup]="formValuePresentation">
+          <div *ngFor="let presentation of myPresentation">
+            <!--fullName-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Name</label
+              >
+
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="fullName"
+                  class="form-control"
+                  id="colFormLabel"
+                  [(ngModel)]="presentation.fullName"
+                />
+              </div>
+            </div>
+
+            <!--validation fullName-->
+            <div>
+              <div
+                *ngIf="
+                  formValuePresentation.get('fullName')?.invalid &&
+                  formValuePresentation.get('fullName')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValuePresentation.get('fullName')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The Full Name
+                    is required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValuePresentation.get('fullName')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> The Full Name
+                    must be at least 5 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValuePresentation.get('fullName')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The Full Name
+                    must be less than 25 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--position-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Position</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="position"
+                  class="form-control"
+                  id="colFormLabel"
+                  [(ngModel)]="presentation.position"
+                />
+              </div>
+            </div>
+
+            <!--validation position-->
+            <div>
+              <div
+                *ngIf="
+                  formValuePresentation.get('position')?.invalid &&
+                  formValuePresentation.get('position')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValuePresentation.get('position')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The position is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValuePresentation.get('position')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> The position
+                    must be at least 5 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValuePresentation.get('position')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The position
+                    must be less than 35 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--ubication-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Ubication</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="ubication"
+                  class="form-control"
+                  id="colFormLabel"
+                  [(ngModel)]="presentation.ubication"
+                />
+              </div>
+            </div>
+
+            <!--validation ubication-->
+            <div>
+              <div
+                *ngIf="
+                  formValuePresentation.get('ubication')?.invalid &&
+                  formValuePresentation.get('ubication')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValuePresentation.get('ubication')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The ubication
+                    is required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValuePresentation.get('ubication')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> The ubication
+                    must be at least 5 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValuePresentation.get('ubication')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>The ubication
+                    must be less than 50 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--logical btn-->
+      <div style="background-color: #d4cbdd" class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [disabled]="formValuePresentation.invalid"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit image presentation-->
+<div
+  class="modal fade"
+  id="presentationImgModal"
+  tabindex="-1"
+  aria-labelledby="presentationImgModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div style="background-color: #d4cbdd" class="modal-header">
+        <h1 class="modal-title fs-5" id="presentationImgModalLabel">
+          Edit: Image Presentation
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!--form-->
+      <div class="modal-body">
+        <form [formGroup]="formValueImg">
+          <div class="mb-3">
+            <label for="formFile" class="form-label">
+              <img [attr.src]="myImage"
+            /></label>
+            <input
+              class="form-control"
+              formControlName="image"
+              type="file"
+              id="formFile"
+            />
+          </div>
+
+          <!--validation img-->
+
+          <div
+            *ngIf="
+              formValueImg.get('image')?.invalid &&
+              formValueImg.get('image')?.touched
+            "
+            class="alert alert-warning"
+          >
+            <!--required-->
+            <div *ngIf="formValueImg.get('image')?.errors?.['required']">
+              <p>
+                <i class="bi bi-exclamation-circle-fill"></i>The image is
+                required
+              </p>
+            </div>
+            <div *ngIf="formValueImg.pending">Validating...</div>
+          </div>
+        </form>
+      </div>
+
+      <!--logical btn-->
+      <div style="background-color: #d4cbdd" class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          [disabled]="formValueImg.invalid"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
