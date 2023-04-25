@@ -1,56 +1,239 @@
-<app-header></app-header>
+<!-- Modal Edit-->
+<section>
+  <div
+    class="modal fade"
+    id="projectUpdateModal"
+    tabindex="-1"
+    aria-labelledby="projectModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: #d4cbdd" class="modal-header">
+          <h1 class="modal-title fs-5" id="projectModalLabel">
+            Update: Project
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
 
-<!--form-->
-<div class="container-contact">
-  <div class="shadow-lg p-3 rounded">
-    <div class="title-project">
-      <p>Change: project</p>
+        <!--form-->
+        <div class="modal-body">
+          <form [formGroup]="formValueProject">
+            <!--image-->
+            <div class="row mb-3">
+              <label for="formFile" class="form-label">Image</label>
+              <div class="col-sm-10">
+                <input
+                  class="form-control"
+                  formControlName="image"
+                  type="file"
+                  id="formFile"
+                />
+              </div>
+            </div>
+
+            <!--validation img-->
+            <div
+              *ngIf="
+                formValueProject.get('gif')?.invalid &&
+                formValueProject.get('gif')?.touched
+              "
+              class="alert alert-warning"
+            >
+              <!--required-->
+              <div *ngIf="formValueProject.get('gif')?.errors?.['required']">
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>The Image is
+                  required
+                </p>
+              </div>
+              <div *ngIf="formValueProject.pending">Validating...</div>
+            </div>
+
+            <!--name-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Project name</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="name"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+
+            <!--validation name-->
+            <div>
+              <div
+                *ngIf="
+                  formValueProject.get('name')?.invalid &&
+                  formValueProject.get('name')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div *ngIf="formValueProject.get('name')?.errors?.['required']">
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Project name is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueProject.get('name')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 3 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueProject.get('name')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 25 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--details-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Project details</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="details"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+
+            <!--validation details-->
+            <div>
+              <div
+                *ngIf="
+                  formValueProject.get('details')?.invalid &&
+                  formValueProject.get('details')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValueProject.get('details')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i> Porject
+                    details is required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueProject.get('details')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 3 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueProject.get('details')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 60 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--date-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Date</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="date"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+            <!--validation date-->
+            <div>
+              <div
+                *ngIf="
+                  formValueProject.get('date')?.invalid &&
+                  formValueProject.get('date')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div *ngIf="formValueProject.get('date')?.errors?.['required']">
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Date is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueProject.get('date')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 3 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueProject.get('date')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 20 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--logical btn-->
+        <div style="background-color: #d4cbdd" class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            [disabled]="formValueProject.invalid"
+          >
+            Update
+          </button>
+        </div>
+      </div>
     </div>
-    <form>
-      <div class="form-group">
-        <!--name project-->
-        <input
-          type="text"
-          class="form-control"
-          id="project-name"
-          placeholder="Change Name"
-        />
-      </div>
-      <!--image project-->
-      <div class="form-group">
-        <input
-          type="image"
-          class="form-control"
-          id="project-image"
-          placeholder="Change Image"
-        />
-      </div>
-      <!--description project-->
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control"
-          id="project-description"
-          placeholder="Change Description"
-        />
-      </div>
-      <!--date project-->
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control"
-          id="project-description"
-          placeholder="Change work date"
-        />
-      </div>
-      <!--button-->
-      <div class="btn-add">
-        <button type="submit">
-          <i class="bi bi-file-text-fill"></i>Save the changes
-        </button>
-      </div>
-    </form>
   </div>
-</div>
-
-<app-footer></app-footer>
+</section>

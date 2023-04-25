@@ -20,7 +20,7 @@ export class ListProjectsComponent implements OnInit {
   showadd!: boolean;
   showupdate!: boolean;
 
-  //form project
+  //form add project
   formValueProject = new FormGroup({
     image: new FormControl('', [Validators.required]),
     name: new FormControl('', [
@@ -46,7 +46,7 @@ export class ListProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log(data);
-      this.listProjects = data.projects; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
+      this.listProjects = data.projects;
     });
   }
 

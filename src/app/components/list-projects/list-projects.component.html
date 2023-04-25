@@ -37,7 +37,7 @@
                     class="btn btn-primary"
                     (click)="update()"
                     data-bs-toggle="modal"
-                    data-bs-target="#projectModal"
+                    data-bs-target="#projectUpdateModal"
                   >
                     <i class="bi bi-pencil-fill"></i>
                   </button>
@@ -54,7 +54,11 @@
   </div>
 </section>
 
-<!-- Modal Edit-->
+<!--Modal update project-->
+
+<app-change-project></app-change-project>
+
+<!-- Modal add project-->
 <section>
   <div
     class="modal fade"
@@ -66,7 +70,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div style="background-color: #d4cbdd" class="modal-header">
-          <h1 class="modal-title fs-5" id="projectModalLabel">Edit: Project</h1>
+          <h1 class="modal-title fs-5" id="projectModalLabel">Add: Project</h1>
           <button
             type="button"
             class="btn-close"

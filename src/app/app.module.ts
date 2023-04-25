@@ -26,10 +26,6 @@ import { ListProjectsComponent } from './components/list-projects/list-projects.
 
 import { LoginComponent } from './components/login/login.component';
 
-import { ChangeProjectComponent } from './components/modals/change-project/change-project.component';
-
-import { AddProjectComponent } from './components/modals/add-project/add-project.component';
-
 import { SkillsComponent } from './components/skills/skills.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -52,6 +48,8 @@ import { ChangeSkillsComponent } from './components/modals/change-skills/change-
 
 import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
 
+import { ChangeProjectComponent } from './components/modals/change-project/change-project.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,8 +61,6 @@ import { ChangeEducationComponent } from './components/modals/change-education/c
     FooterComponent,
     ListProjectsComponent,
     LoginComponent,
-    ChangeProjectComponent,
-    AddProjectComponent,
     SkillsComponent,
     PageNotFoundComponent,
     EducationComponent,
@@ -74,6 +70,7 @@ import { ChangeEducationComponent } from './components/modals/change-education/c
     ChangePresentationComponent,
     ChangeSkillsComponent,
     ChangeEducationComponent,
+    ChangeProjectComponent,
   ],
   imports: [
     BrowserModule,
