@@ -24,7 +24,16 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  login() {
+  login(event: Event) {
+    event.preventDefault;
+
+    if (this.formValueLogin.valid) {
+      alert('Welcome Admin!!');
+      this.router.navigate(['/']);
+    } else {
+      this.formValueLogin.markAllAsTouched();
+    }
+
     //send data to firebase
     // const email = this.formValueLogin.value.email;
     // const password = this.formValueLogin.value.password;
@@ -43,10 +52,5 @@ export class LoginComponent implements OnInit {
   // home page
   handlerClick() {
     this.router.navigate(['/']);
-  }
-
-  //coloco modo oscuro
-  toggleDarkTheme(): void {
-    document.body.classList.toggle('dark-theme');
   }
 }

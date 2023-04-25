@@ -1,21 +1,17 @@
 <app-header></app-header>
 
-<!--change color SPA-->
+<!--change color SPA
 <div class="dark-btn">
   <button (click)="toggleDarkTheme()">
     <i class="bi bi-toggles"></i> Light/Dark
   </button>
 </div>
+-->
 
 <!--form login-->
 <div class="container-login">
   <div class="shadow-lg p-3 rounded">
-    <!--
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-     
-     Email input -->
-
-    <form [formGroup]="formValueLogin" (ngSubmit)="login()">
+    <form [formGroup]="formValueLogin" (ngSubmit)="login($event)">
       <div class="form-outline mb-4">
         <div class="title-login">
           <label for="colFormLabel" class="col-sm-2 col-form-label"
