@@ -16,15 +16,6 @@ export class SkillsComponent implements OnInit {
   showadd!: boolean;
   showupdate!: boolean;
 
-  //form soft Skills
-  formValueSoftSkill = new FormGroup({
-    softSkill: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(500),
-    ]),
-  });
-
   //form Hard Skills
   formValueHardSkill = new FormGroup({
     name: new FormControl('', [

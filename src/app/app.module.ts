@@ -37,7 +37,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { EducationComponent } from './components/education/education.component';
 
 import { ButtonLoginComponent } from './components/button-login/button-login.component';
+
 import { ButtonLogoutComponent } from './components/button-logout/button-logout.component';
+
 //import { environment } from 'src/environments/environment';
 
 //modals
@@ -45,6 +47,8 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
 import { ChangeAboutComponent } from './components/modals/change-about/change-about.component';
 
 import { ChangePresentationComponent } from './components/modals/change-presentation/change-presentation.component';
+
+import { ChangeSkillsComponent } from './components/modals/change-skills/change-skills.component';
 
 //import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
 
@@ -68,6 +72,7 @@ import { ChangePresentationComponent } from './components/modals/change-presenta
     ButtonLogoutComponent,
     ChangeAboutComponent,
     ChangePresentationComponent,
+    ChangeSkillsComponent,
   ],
   imports: [
     BrowserModule,
