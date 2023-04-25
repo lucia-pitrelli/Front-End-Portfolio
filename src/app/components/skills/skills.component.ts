@@ -16,7 +16,7 @@ export class SkillsComponent implements OnInit {
   showadd!: boolean;
   showupdate!: boolean;
 
-  //form Hard Skills
+  //form add Hard Skills
   formValueHardSkill = new FormGroup({
     name: new FormControl('', [
       Validators.required,
@@ -33,7 +33,7 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log(data);
 
-      this.mySkills = data.softSkills; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
+      this.mySkills = data.softSkills;
       this.listOfSkills = data.hardSkills;
     });
   }

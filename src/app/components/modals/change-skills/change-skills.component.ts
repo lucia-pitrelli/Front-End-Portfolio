@@ -10,15 +10,25 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ChangeSkillsComponent implements OnInit {
   //json data
   mySkills: any;
-  // listOfSkills: any;
+  listOfSkills: any;
 
-  //form soft Skills
+  //form update soft Skills
   formValueSoftSkill = new FormGroup({
     softSkill: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(500),
     ]),
+  });
+
+  //form update Hard Skills
+  formValueHardSkill = new FormGroup({
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(1),
+      Validators.maxLength(20),
+    ]),
+    percentage: new FormControl('', [Validators.required]),
   });
   constructor(private datosPortfolio: PortfolioService) {}
 
@@ -28,7 +38,7 @@ export class ChangeSkillsComponent implements OnInit {
       console.log(data);
 
       this.mySkills = data.softSkills;
-      // this.listOfSkills = data.hardSkills;
+      this.listOfSkills = data.hardSkills;
     });
   }
 }

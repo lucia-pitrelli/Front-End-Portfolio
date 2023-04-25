@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 

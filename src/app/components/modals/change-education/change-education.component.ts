@@ -1,10 +1,40 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-change-education',
   templateUrl: './change-education.component.html',
-  styleUrls: ['./change-education.component.css']
+  styleUrls: ['./change-education.component.css'],
 })
-export class ChangeEducationComponent {
+export class ChangeEducationComponent implements OnInit {
+  //json data
+  listofCourses: any;
 
+  //form update education
+  formValueEducation = new FormGroup({
+    institution: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(40),
+    ]),
+    degree: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(40),
+    ]),
+    date: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(20),
+    ]),
+  });
+  constructor(private datosPortfolio: PortfolioService) {}
+
+  //suscribe para utilizar el data.json
+  ngOnInit(): void {
+    this.datosPortfolio.obtenerDatos().subscribe((data) => {
+      console.log(data);
+      this.listofCourses = data.education;
+    });
+  }
 }

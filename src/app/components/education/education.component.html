@@ -21,7 +21,7 @@
             class="btn btn-primary"
             (click)="update()"
             data-bs-toggle="modal"
-            data-bs-target="#educationModal"
+            data-bs-target="#educationUpdateModal"
           >
             <i class="bi bi-pencil-fill"></i>
           </button>
@@ -34,7 +34,7 @@
   </div>
 </section>
 
-<!-- Modal Edit-->
+<!-- Modal add Education-->
 <section>
   <div
     class="modal fade"
@@ -47,7 +47,7 @@
       <div class="modal-content">
         <div style="background-color: #d4cbdd" class="modal-header">
           <h1 class="modal-title fs-5" id="educationModalLabel">
-            Edit: Education
+            Add: Education
           </h1>
           <button
             type="button"
@@ -257,6 +257,10 @@
     </div>
   </div>
 </section>
+
+<!-- Modal update Education-->
+
+<app-change-education></app-change-education>
 
 <!--decoration star-->
 

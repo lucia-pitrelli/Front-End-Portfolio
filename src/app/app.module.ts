@@ -48,9 +48,9 @@ import { ChangeAboutComponent } from './components/modals/change-about/change-ab
 
 import { ChangePresentationComponent } from './components/modals/change-presentation/change-presentation.component';
 
-import { ChangeSkillsComponent } from './components/modals/change-skills/change-skills.component';
+import { ChangeSkillsComponent } from './components/modals/change-skills/change-skills.component'; //falta agregar modal update de hard skills
 
-//import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
+import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +73,7 @@ import { ChangeSkillsComponent } from './components/modals/change-skills/change-
     ChangeAboutComponent,
     ChangePresentationComponent,
     ChangeSkillsComponent,
+    ChangeEducationComponent,
   ],
   imports: [
     BrowserModule,

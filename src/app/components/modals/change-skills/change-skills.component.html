@@ -106,4 +106,145 @@
   </div>
 </section>
 
-<!--FALTA AGREGAR UPDATE HARD SKILLS-->
+<!-- Modal Edit HARD SKILLS-->
+<section>
+  <div
+    class="modal fade"
+    id="hardSkillUpdateModal"
+    tabindex="-1"
+    aria-labelledby="hardSkillModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: #d4cbdd" class="modal-header">
+          <h1 class="modal-title fs-5" id="hardSkillModalLabel">
+            Update: Hard Skills
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <!--form-->
+        <div class="modal-body">
+          <form [formGroup]="formValueHardSkill">
+            <!--Skill's name-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label">
+                Skill's name</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="name"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+
+            <!--validation Skill's name-->
+            <div>
+              <div
+                *ngIf="
+                  formValueHardSkill.get('name')?.invalid &&
+                  formValueHardSkill.get('name')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValueHardSkill.get('name')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Skill's name is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueHardSkill.get('name')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 1 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueHardSkill.get('name')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 20 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--percentage-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Percentage</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  formControlName="percentage"
+                  min="10"
+                  max="100"
+                  required
+                />
+              </div>
+            </div>
+            <!--validation percentage-->
+
+            <div>
+              <div
+                *ngIf="
+                  formValueHardSkill.get('percentage')?.invalid &&
+                  formValueHardSkill.get('percentage')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValueHardSkill.get('percentage')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Percentage is
+                    required
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--logical btn-->
+        <div style="background-color: #d4cbdd" class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            [disabled]="formValueHardSkill.invalid"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
