@@ -100,7 +100,7 @@
     { "id": 9, "name": "Scrum", "percentage": "40" }
   ],
 
-  "user": [
+  "User": [
     {
       "id": 1,
       "email": "pepito@gmail.com",

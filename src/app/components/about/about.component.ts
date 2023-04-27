@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
   //suscribe para utilizar el data.json
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
+      //console.log(data);
       this.aboutMe = data.about; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
     });
   }
