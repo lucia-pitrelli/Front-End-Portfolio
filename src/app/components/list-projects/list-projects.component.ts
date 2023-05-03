@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-//import { PROJECTS } from 'src/app/mock-projects';
-//import { Project } from 'src/app/Project';
+import { Component, OnInit, Input } from '@angular/core';
+//import { PROJECTS } from 'src/app/mock-projects';  //no lo voy a usar
+//import { Project } from 'src/app/models/Project';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -12,6 +12,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ListProjectsComponent implements OnInit {
   //json data
   listProjects: any;
+
+  //service (not working yet)
+  // projects: Project[] = [];
 
   //testing login
   mostrar = true;
@@ -61,8 +64,15 @@ export class ListProjectsComponent implements OnInit {
     this.showadd = false;
     this.showupdate = true;
   }
+
+  //add new project (not working yet)
+  // selectedProject: Project = new Project();
+
+  // addProject() {
+  //   this.selectedProject.id = this.projects.length + 1;
+  //    this.projects.push(this.selectedProject);
+  //  }
 }
 
 /*colocar input en el import si lo quiero usar*/
 // listProjects = PROJECTS;
-//  @Input() projects: Project[] = [];

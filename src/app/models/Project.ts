@@ -3,4 +3,5 @@ export interface Project {
   image: string;
   name: string;
   details: string;
+  date: number;
 }
