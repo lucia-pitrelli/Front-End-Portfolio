@@ -1,15 +1,10 @@
 <div class="containerColor">
+  <!--image AP-->
+  <app-img-ap></app-img-ap>
+
   <div class="container">
     <nav class="navStyle">
       <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item" id="img-arg">
-          <a href="#">
-            <img [attr.src]="logoAp" />
-          </a>
-        </li>
-        <li>
-          <p class="title-header">{{ titleHeader }}</p>
-        </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Home</a>
         </li>
@@ -31,13 +26,24 @@
       </ul>
     </nav>
 
-    <app-button-login></app-button-login>
-    <div class="container-admin">
-      <div class="title-welcome" *ngIf="login"><p>Welcome, Admin</p></div>
-      <div class="title-welcome" *ngIf="!login">Please, Log in</div>
-    </div>
-    <div *ngIf="!login">
-      <app-button-logout></app-button-logout>
-    </div>
+    <section>
+      <div class="container-admin">
+        <div><app-button-login></app-button-login></div>
+        <div *ngIf="!login"><app-button-logout></app-button-logout></div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="title-welcome" *ngIf="login">
+              <p>Welcome, Admin</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="title-welcome" *ngIf="login"><p>Please, Log in</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>

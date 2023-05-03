@@ -17,25 +17,19 @@
       "id": "1",
       "institution": "UADE",
       "degree": "Bachelor's Degree in Business Administration",
-      "date": "2016 - To date"
+      "date": "2016 - 2023"
     },
     {
       "id": "2",
-      "institution": "Digital House",
-      "degree": "Full stack developer",
-      "date": "2021-2022"
-    },
-    {
-      "id": "3",
       "institution": "Argentina Programa 4.0",
       "degree": "Sé Programar, Full stack developer",
       "date": "2022"
     },
     {
-      "id": "4",
+      "id": "3",
       "institution": "Argentina Programa 4.0",
       "degree": "Yo Programo, Full stack developer",
-      "date": "2022 - To date"
+      "date": "2022 - 2023"
     }
   ],
 
@@ -50,33 +44,19 @@
     {
       "id": 2,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
-      "name": "Movies DB",
-      "details": "List of movies",
-      "date": "2022"
-    },
-    {
-      "id": 3,
-      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
       "name": "My Portfolio",
       "details": "Final project Argentina Programa 4.0, My Portfolio Web Full Stack using Angular ",
       "date": "2023"
     },
     {
-      "id": 4,
+      "id": 3,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
       "name": "Calculator angular",
       "details": "Calculator project for Argentina Programa 4.0",
       "date": "2023"
     },
     {
-      "id": 5,
-      "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
-      "name": "Huerto market",
-      "details": "An online grocery website",
-      "date": "2022 -2023"
-    },
-    {
-      "id": 6,
+      "id": 4,
       "image": "https://www.cronista.com/files/image/469/469744/62d5768f94e04.jpg",
       "name": "Playing piano",
       "details": "An app to practice playing wiht a piano",
@@ -105,24 +85,6 @@
       "id": 1,
       "email": "pepito@gmail.com",
       "password": "pepito123"
-    }
-  ],
-
-  "socialNetworks": [
-    {
-      "id": "1",
-      "name": "Github",
-      "url": "http://github.com/lucia-pitrelli"
-    },
-    {
-      "id": "2",
-      "name": "LinkedIn",
-      "url": "http://github.com/lucia-pitrelli"
-    },
-    {
-      "id": "3",
-      "name": "Email",
-      "url": "http://github.com/lucia-pitrelli"
     }
   ]
 }

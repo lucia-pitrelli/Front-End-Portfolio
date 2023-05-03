@@ -1,6 +1,5 @@
 .navStyle {
   padding-top: 20px;
-  padding-bottom: 8px;
   font-size: 18px;
   color: var(--fourth-bg-color);
   font-weight: bold;
@@ -14,31 +13,15 @@
   color: var(--third-text-color);
 }
 
-/*title and image yo Programo*/
+/*section login / logout */
 
-.title-header {
-  color: var(--third-text-color);
-  font-size: 10px;
-
-  padding-top: 20px;
-  padding-right: 60px;
-}
-
-#img-arg img {
-  padding-right: 15px;
-  padding-top: 6px;
-
-  width: 130px;
-  height: 45px;
-}
-
-.container-admin {
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-}
 /*title welcome*/
 .title-welcome {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   color: var(--header-color);
-  font-size: 22 px;
+  font-weight: bold;
+  padding-top: 3px;
 }

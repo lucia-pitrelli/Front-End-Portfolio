@@ -7,12 +7,11 @@
   display: flex;
   flex-direction: row-reverse;
 
-  padding-bottom: 25px;
+  padding-bottom: 3px;
 }
 
 .btn-login {
   padding: 8px;
-
   border-color: var(--secondary-icons-color);
 }
 

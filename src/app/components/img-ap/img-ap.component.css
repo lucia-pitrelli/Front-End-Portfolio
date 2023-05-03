@@ -1,0 +1,21 @@
+/*title and image yo Programo*/
+
+.container-Ap {
+  display: flex;
+}
+
+.title-header {
+  color: var(--third-text-color);
+  font-size: 10px;
+
+  padding-top: 20px;
+  padding-right: 60px;
+}
+
+#img-arg img {
+  padding-right: 15px;
+  padding-top: 10px;
+
+  width: 130px;
+  height: 55px;
+}

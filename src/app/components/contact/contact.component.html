@@ -6,148 +6,156 @@
 </div>
 
 <!--form-->
-<div class="container-contact">
-  <div class="shadow-lg p-3 rounded">
-    <div class="title-contact" id="contact">
-      <p>Contact Me</p>
-    </div>
+<section class="container">
+  <div class="container-contact">
+    <div class="shadow-lg p-3 rounded">
+      <div class="title-contact" id="contact">
+        <p>Contact Me</p>
+      </div>
 
-    <form [formGroup]="formValueContact">
-      <!--name-->
-      <div class="form-group">
-        <label for="colFormLabel" class="form-label">
-          <p id="text">Name</p>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="name"
-            id="colFormLabel"
-          />
-        </label>
-
-        <!--validation name-->
-        <div>
-          <div
-            *ngIf="
-              formValueContact.get('name')?.invalid &&
-              formValueContact.get('name')?.touched
-            "
-            class="alert alert-warning"
-          >
-            <!--required-->
-            <div *ngIf="formValueContact.get('name')?.errors?.['required']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i>The name is
-                required
-              </p>
-            </div>
-            <!--min length-->
-            <div *ngIf="formValueContact.get('name')?.errors?.['minlength']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i> The name must be
-                at least 5 characters long
-              </p>
-            </div>
-            <!--max length-->
-            <div *ngIf="formValueContact.get('name')?.errors?.['maxlength']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i>The name must be
-                less than 25 characters long
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!--email-->
+      <form [formGroup]="formValueContact">
+        <!--name-->
         <div class="form-group">
           <label for="colFormLabel" class="form-label">
-            <p id="text">Email</p>
+            <p id="text">Name</p>
             <input
-              type="email"
+              type="text"
               class="form-control"
-              formControlName="email"
+              formControlName="name"
               id="colFormLabel"
-              required
             />
           </label>
-        </div>
 
-        <!--validation email-->
-        <div>
-          <div
-            *ngIf="
-              formValueContact.get('email')?.invalid &&
-              formValueContact.get('email')?.touched
-            "
-            class="alert alert-warning"
-          >
-            <!--required-->
-            <div *ngIf="formValueContact.get('email')?.errors?.['required']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i>Email is required
-              </p>
+          <!--validation name-->
+          <div>
+            <div
+              *ngIf="
+                formValueContact.get('name')?.invalid &&
+                formValueContact.get('name')?.touched
+              "
+              class="alert alert-warning"
+            >
+              <!--required-->
+              <div *ngIf="formValueContact.get('name')?.errors?.['required']">
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>The name is
+                  required
+                </p>
+              </div>
+              <!--min length-->
+              <div *ngIf="formValueContact.get('name')?.errors?.['minlength']">
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i> The name must be
+                  at least 5 characters long
+                </p>
+              </div>
+              <!--max length-->
+              <div *ngIf="formValueContact.get('name')?.errors?.['maxlength']">
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>The name must be
+                  less than 25 characters long
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!--COMENTARIO-->
-        <div class="form-group">
-          <label for="colFormLabel" class="form-label">
-            <p id="text">Message</p>
-            <textarea
-              cols="30"
-              rows="10"
-              class="form-control"
-              formControlName="message"
-              id="colFormLabel"
-            ></textarea>
-          </label>
-        </div>
+          <!--email-->
+          <div class="form-group">
+            <label for="colFormLabel" class="form-label">
+              <p id="text">Email</p>
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                id="colFormLabel"
+                required
+              />
+            </label>
+          </div>
 
-        <!--validation message-->
-
-        <div>
-          <div
-            *ngIf="
-              formValueContact.get('message')?.invalid &&
-              formValueContact.get('message')?.touched
-            "
-            class="alert alert-warning"
-          >
-            <!--required-->
-            <div *ngIf="formValueContact.get('message')?.errors?.['required']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i>Text is required
-              </p>
-            </div>
-            <!--min length-->
-            <div *ngIf="formValueContact.get('message')?.errors?.['minlength']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i>Text must be at
-                least 10 characters long
-              </p>
-            </div>
-            <!--max length-->
-            <div *ngIf="formValueContact.get('message')?.errors?.['maxlength']">
-              <p>
-                <i class="bi bi-exclamation-circle-fill"></i>Text must be less
-                than 500 characters long
-              </p>
+          <!--validation email-->
+          <div>
+            <div
+              *ngIf="
+                formValueContact.get('email')?.invalid &&
+                formValueContact.get('email')?.touched
+              "
+              class="alert alert-warning"
+            >
+              <!--required-->
+              <div *ngIf="formValueContact.get('email')?.errors?.['required']">
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>Email is required
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <button
-          class="btn btn-info"
-          type="submit"
-          [disabled]="formValueContact.invalid"
-        >
-          Send
-        </button>
-      </div>
-    </form>
+          <!--COMENTARIO-->
+          <div class="form-group">
+            <label for="colFormLabel" class="form-label">
+              <p id="text">Message</p>
+              <textarea
+                cols="30"
+                rows="10"
+                class="form-control"
+                formControlName="message"
+                id="colFormLabel"
+              ></textarea>
+            </label>
+          </div>
+
+          <!--validation message-->
+
+          <div>
+            <div
+              *ngIf="
+                formValueContact.get('message')?.invalid &&
+                formValueContact.get('message')?.touched
+              "
+              class="alert alert-warning"
+            >
+              <!--required-->
+              <div
+                *ngIf="formValueContact.get('message')?.errors?.['required']"
+              >
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>Text is required
+                </p>
+              </div>
+              <!--min length-->
+              <div
+                *ngIf="formValueContact.get('message')?.errors?.['minlength']"
+              >
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                  least 10 characters long
+                </p>
+              </div>
+              <!--max length-->
+              <div
+                *ngIf="formValueContact.get('message')?.errors?.['maxlength']"
+              >
+                <p>
+                  <i class="bi bi-exclamation-circle-fill"></i>Text must be less
+                  than 500 characters long
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-info"
+            type="submit"
+            [disabled]="formValueContact.invalid"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+</section>
 
 <!--animation-->
 <div class="animation-footer">

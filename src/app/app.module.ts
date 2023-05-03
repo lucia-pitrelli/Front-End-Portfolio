@@ -41,6 +41,8 @@ import { ButtonLoginComponent } from './components/button-login/button-login.com
 
 import { ButtonLogoutComponent } from './components/button-logout/button-logout.component';
 
+import { ImgAPComponent } from './components/img-ap/img-ap.component';
+
 //import { environment } from 'src/environments/environment';
 
 //modals
@@ -76,6 +78,7 @@ import { ChangeProjectComponent } from './components/modals/change-project/chang
     ChangeSkillsComponent,
     ChangeEducationComponent,
     ChangeProjectComponent,
+    ImgAPComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,21 @@
-.feautersIcons {
-  padding: 20px;
+.feautersIcons i {
   font-size: 25px;
   color: var(--third-text-color);
   font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.feautersIcons a {
+  text-decoration: none;
 }
 
 .bgColorFooter {
   background-color: var(--fourth-bg-color);
 }
 
-/*image yo programo*/
-
-#img-arg img {
-  width: 150px;
-  height: 50px;
+.text-icon {
+  padding-top: 20px;
+  font-size: 18px;
+  color: var(--third-text-color);
+  font-weight: bold;
 }
-
-/*icons
-section ul {
-  display: flex;
-  justify-content: flex-end;
-}*/

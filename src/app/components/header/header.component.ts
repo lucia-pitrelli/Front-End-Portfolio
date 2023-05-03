@@ -6,11 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  //binding
-  logoAp = '../../../assets/img/APLogo.png';
-
-  titleHeader = '# Yo Programo';
-
   //hide login
   login = true;
 
