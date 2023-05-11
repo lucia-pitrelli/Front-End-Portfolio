@@ -3,8 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
-//import { AngularFireAuth } from '@angular/fire/compat/auth';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -31,7 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log('login', data);
-      this.admin = data.User; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
+      this.admin = data.Admin; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
     });
   }
 
@@ -44,20 +42,6 @@ export class LoginComponent implements OnInit {
     } else {
       this.formValueLogin.markAllAsTouched();
     }
-
-    //send data to firebase
-    // const email = this.formValueLogin.value.email;
-    // const password = this.formValueLogin.value.password;
-    //show data in console
-    //console.warn(this.formValueLogin.value);
-    // this.afAuth
-    //  .signInWithEmailAndPassword(email, password)
-    // .then((user) => {
-    //   console.log(user);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    //  });
   }
 
   // home page
