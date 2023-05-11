@@ -1,13 +1,5 @@
 <app-header></app-header>
 
-<!--change color SPA
-<div class="dark-btn">
-  <button (click)="toggleDarkTheme()">
-    <i class="bi bi-toggles"></i> Light/Dark
-  </button>
-</div>
--->
-
 <!--form login-->
 <div class="container-login">
   <div class="shadow-lg p-3 rounded">
@@ -73,10 +65,10 @@
           </div>
 
           <!--min length-->
-          <div *ngIf="formValueLogin.get('name')?.errors?.['minlength']">
+          <div *ngIf="formValueLogin.get('password')?.errors?.['minlength']">
             <p>
-              <i class="bi bi-exclamation-circle-fill"></i> The password must be
-              at least 8 characters long
+              <i class="bi bi-exclamation-circle-fill"></i> Password must be at
+              least 8 characters long
             </p>
           </div>
         </div>
@@ -92,8 +84,9 @@
       </button>
     </form>
   </div>
+  <div class="btn-home">
+    <button class="btn btn-secondary" (click)="handlerClick()">Home</button>
+  </div>
 </div>
-
-<button class="btn btn-warning" (click)="handlerClick()">Go to Home</button>
 
 <app-footer></app-footer>

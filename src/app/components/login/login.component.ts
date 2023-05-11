@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log('login', data);
-      this.admin = data.Admin; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
+      this.admin = data.Admin;
     });
   }
 
@@ -37,10 +37,15 @@ export class LoginComponent implements OnInit {
     event.preventDefault;
 
     if (this.formValueLogin.valid) {
-      alert('Welcome Admin!!');
-      this.router.navigate(['/']);
-    } else {
-      this.formValueLogin.markAllAsTouched();
+      let email = this.formValueLogin.get('email')?.value;
+      let password = this.formValueLogin.get('password')?.value;
+      if (email == 'pepito@gmail.com' && password == 'pepito123') {
+        alert('Welcome Admin!!');
+        this.router.navigate(['/']);
+      } else {
+        this.formValueLogin.markAllAsTouched();
+        alert('Data incorrect');
+      }
     }
   }
 

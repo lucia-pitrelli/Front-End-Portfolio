@@ -1,8 +1,14 @@
+.feautersIcons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
 .feautersIcons i {
   font-size: 25px;
   color: var(--third-text-color);
   font-weight: bold;
-  padding-bottom: 3px;
+  padding-left: 10px;
 }
 
 .feautersIcons a {
@@ -11,6 +17,7 @@
 
 .bgColorFooter {
   background-color: var(--fourth-bg-color);
+  padding-top: 8px;
 }
 
 .text-icon {
