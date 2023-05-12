@@ -19,12 +19,15 @@ export class AuthService {
     // add a value to the local storage
     localStorage.setItem('token', 'xhja787');
     this.loggedIn = true;
+    console.log('user logged in');
   }
 
   logout() {
     // remove token in local storage
     localStorage.removeItem('token');
+    localStorage.clear();
     this.loggedIn = false;
+    console.log('user logged out');
   }
 
   //ask if user is logged in
