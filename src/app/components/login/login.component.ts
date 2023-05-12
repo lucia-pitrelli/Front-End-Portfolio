@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log('login', data);
+      // console.log('login', data);
       this.admin = data.Admin;
     });
   }

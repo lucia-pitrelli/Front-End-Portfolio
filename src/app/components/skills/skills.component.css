@@ -1,13 +1,3 @@
-.title-skills {
-  padding-top: 70px;
-  padding-bottom: 40px;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  color: var(--main-titles-color);
-}
-
 .container-skills {
   padding: 30px;
   margin: 20px;
@@ -96,13 +86,22 @@ i {
   background-color: var(--secondary-bg-color);
 }
 
-/*button update features
+/*btn add hard skill*/
 
-.btn-update {
-  margin-top: 4px;
+.btn-add-skill {
+  padding-top: 15px;
+  padding-left: 40px;
 }
 
-.btn-update i {
-  padding: 3px;
+.btn-add-skill button i {
+  color: var(--third-bg-color);
 }
-*/
+
+/*button update features*/
+.btn-update-skill {
+  margin: 3px;
+}
+
+.btn-update-skill button i {
+  color: var(--third-bg-color);
+}

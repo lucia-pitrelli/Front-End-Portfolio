@@ -1,9 +1,5 @@
 <div class="container-skills" id="skills">
   <div class="row align-items-center">
-    <div class="title-skills">
-      <p>My Skills</p>
-    </div>
-
     <!--FIRST SECTION-->
     <!--Soft skills-->
     <div class="col">
@@ -19,7 +15,7 @@
 
           <!--buttons changes and delete features-->
           <div class="container">
-            <div class="btn-update">
+            <div class="btn-update-skill">
               <button
                 class="btn btn-primary"
                 (click)="update()"
@@ -40,6 +36,7 @@
     <!--SECOND SECTION-->
 
     <!--List of Hard skills-->
+
     <div class="col">
       <h1 class="card-title">Hard Skills</h1>
       <div *ngFor="let skill of listOfSkills; let i = index">
@@ -67,7 +64,7 @@
 
         <!--buttons changes and delete features-->
         <div class="container">
-          <div class="btn-update">
+          <div class="btn-update-skill">
             <button
               class="btn btn-primary"
               (click)="update()"
@@ -82,20 +79,20 @@
           </div>
         </div>
       </div>
+
+      <!--btn add new Hard skills-->
+      <div class="btn-add-skill">
+        <button
+          class="btn btn-primary"
+          (click)="add()"
+          data-bs-toggle="modal"
+          data-bs-target="#hardSkillModal"
+        >
+          <i class="bi bi-plus-circle">Add new Hard Skill</i>
+        </button>
+      </div>
     </div>
   </div>
-</div>
-
-<!--btn add new Hard skills-->
-<div>
-  <button
-    class="btn btn-primary"
-    (click)="add()"
-    data-bs-toggle="modal"
-    data-bs-target="#hardSkillModal"
-  >
-    <i class="bi bi-plus-circle">Add new Hard Skill</i>
-  </button>
 </div>
 
 <!--MODALES-->

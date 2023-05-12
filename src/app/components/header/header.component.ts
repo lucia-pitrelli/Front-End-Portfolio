@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   //hide login
-  login = true;
+  login = false;
 
   ngOnInit(): void {}
 }

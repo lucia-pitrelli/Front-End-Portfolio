@@ -8,22 +8,17 @@
   color: var(--main-titles-color);
 }
 
-/*card project*/
-
-/*.listProjects {
-  display: grid;
-  justify-content: center;
-}*/
+/*list project*/
 
 .container-project {
   display: flex;
-  align-items: stretch;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.card-container {
+.card-bg {
   padding: 20px;
   margin: 20px;
 }
@@ -38,6 +33,7 @@
 
 .card {
   padding: 7px;
+  height: 420px;
 }
 
 .card-title {
@@ -52,36 +48,3 @@
   font-family: "Roboto", "Helvetica Neue", Hel;
   color: var(--main-text-color);
 }
-
-/*button add, see, change and delete the project + style bootstrap*/
-.btn {
-  font-size: 14px;
-  font-family: "Courier New", "Helvetica Neue", Hel;
-  font-weight: bold;
-  letter-spacing: 2px;
-  padding: 5px;
-  margin: 3px;
-}
-
-/*add project btn*/
-
-.style-btn {
-  background-color: var(--main-icons-color);
-  padding: 5px;
-  margin-left: 50px;
-  margin-top: 10px;
-}
-
-.style-btn a {
-  text-decoration: none;
-  color: var(--third-text-color);
-  font-weight: bold;
-}
-
-.style-btn i {
-  color: var(--secondary-icons-color);
-  font-size: 16px;
-  padding: 4px;
-}
-
-/*btn-change and btn project*/

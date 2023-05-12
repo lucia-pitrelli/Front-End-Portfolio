@@ -2,6 +2,7 @@
   <!--image AP-->
   <app-img-ap></app-img-ap>
 
+  <!--nav bar-->
   <div class="container">
     <nav class="navStyle">
       <ul class="nav nav-pills justify-content-center">
@@ -26,21 +27,24 @@
       </ul>
     </nav>
 
+    <!--section login - logout-->
     <section>
       <div class="container-admin">
-        <div><app-button-login></app-button-login></div>
+        <div *ngIf="!login"><app-button-login></app-button-login></div>
         <div *ngIf="!login"><app-button-logout></app-button-logout></div>
       </div>
 
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="title-welcome" *ngIf="login">
+            <div class="title-welcome" *ngIf="!login">
               <p>Welcome, Admin</p>
             </div>
           </div>
           <div class="col">
-            <div class="title-welcome" *ngIf="login"><p>Please, Log in</p></div>
+            <div class="title-welcome" *ngIf="!login">
+              <p>Please, Log in</p>
+            </div>
           </div>
         </div>
       </div>
