@@ -86,7 +86,7 @@
           class="btn btn-primary"
           (click)="add()"
           data-bs-toggle="modal"
-          data-bs-target="#hardSkillModal"
+          data-bs-target="#hardSkillAddModal"
         >
           <i class="bi bi-plus-circle">Add new Hard Skill</i>
         </button>
@@ -101,6 +101,10 @@
 
 <app-change-skills></app-change-skills>
 
+<!-- Modal Add HARD SKILLS-->
+
+<app-add-skills></app-add-skills>
+
 <!-- Modal Edit HARD SKILLS-->
 <section>
   <div
@@ -114,7 +118,7 @@
       <div class="modal-content">
         <div style="background-color: #d4cbdd" class="modal-header">
           <h1 class="modal-title fs-5" id="hardSkillModalLabel">
-            Add: Hard Skills
+            Change: Hard Skills
           </h1>
           <button
             type="button"

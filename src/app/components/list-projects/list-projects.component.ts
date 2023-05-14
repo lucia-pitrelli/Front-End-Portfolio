@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-//import { PROJECTS } from 'src/app/mock-projects';  //no lo voy a usar
+
 //import { Project } from 'src/app/models/Project';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-list-projects',
@@ -22,26 +21,6 @@ export class ListProjectsComponent implements OnInit {
   //modal btn hide
   showadd!: boolean;
   showupdate!: boolean;
-
-  //form add project
-  formValueProject = new FormGroup({
-    image: new FormControl('', [Validators.required]),
-    name: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(25),
-    ]),
-    details: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(60),
-    ]),
-    date: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(20),
-    ]),
-  });
 
   constructor(private datosPortfolio: PortfolioService) {}
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-education',
@@ -14,25 +13,6 @@ export class EducationComponent implements OnInit {
   //modal btn hide
   showadd!: boolean;
   showupdate!: boolean;
-
-  //form education
-  formValueEducation = new FormGroup({
-    institution: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(40),
-    ]),
-    degree: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(40),
-    ]),
-    date: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(20),
-    ]),
-  });
 
   constructor(private datosPortfolio: PortfolioService) {}
 

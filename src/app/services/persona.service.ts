@@ -8,38 +8,27 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EducationService {
-  baseUrl = `${environment.url_api}/api/personas`;
+  baseUrl = `${environment.url_api}/personas`;
 
   constructor(private http: HttpClient) {}
 
   //list of personas
 
   getPersona(): Observable<Persona[]> {
-    return this.http.get<Persona[]>(this.baseUrl);
+    return this.http.get<Persona[]>(this.baseUrl + '/list');
   }
 
   //one persona user
 
   getPersonaById(id: number): Observable<Persona> {
-    return this.http.get<Persona>(`${this.baseUrl}/${id}`);
-  }
-
-  //create a new persona
-
-  postPersona(data: Persona): Observable<Persona> {
-    return this.http.post<Persona>(this.baseUrl, data).pipe(map((res) => res));
-    //  .pipe(tap(() => this.Refreshrequired.next()));    VER SI LO UTILIZO en vez de map
+    return this.http.get<Persona>(this.baseUrl + '/id/' + id);
   }
 
   //update one persona
-  putPersona(data: Persona): Observable<Persona> {
-    return this.http.put<Persona>(this.baseUrl, data).pipe(map((res) => res));
-    //  .pipe(tap(() => this.Refreshrequired.next()));    VER SI LO UTILIZO
-  }
-
-  //delete one persona user
-  deletePersona(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`).pipe(map((res) => res));
+  editPersona(data: Persona): Observable<Persona> {
+    return this.http
+      .put<Persona>(this.baseUrl + '/update', data)
+      .pipe(map((res) => res));
     //  .pipe(tap(() => this.Refreshrequired.next()));    VER SI LO UTILIZO
   }
 }

@@ -57,6 +57,12 @@ import { ChangeEducationComponent } from './components/modals/change-education/c
 
 import { ChangeProjectComponent } from './components/modals/change-project/change-project.component';
 
+import { AddEducationComponent } from './components/modals/add-education/add-education.component';
+
+import { AddProjectComponent } from './components/modals/add-project/add-project.component';
+
+import { AddSkillsComponent } from './components/modals/add-skills/add-skills.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +85,9 @@ import { ChangeProjectComponent } from './components/modals/change-project/chang
     ChangeEducationComponent,
     ChangeProjectComponent,
     ImgAPComponent,
+    AddEducationComponent,
+    AddProjectComponent,
+    AddSkillsComponent,
   ],
   imports: [
     BrowserModule,

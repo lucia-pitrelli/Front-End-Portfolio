@@ -1,1 +1,211 @@
-<p>add-education works!</p>
+<section>
+  <div
+    class="modal fade"
+    id="educationModal"
+    tabindex="-1"
+    aria-labelledby="educationModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: #d4cbdd" class="modal-header">
+          <h1 class="modal-title fs-5" id="educationModalLabel">
+            Add: Education
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <!--form-->
+        <div class="modal-body">
+          <form [formGroup]="formValueEducation">
+            <!--institution-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Institution</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="institution"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+
+            <!--validation institution-->
+            <div>
+              <div
+                *ngIf="
+                  formValueEducation.get('institution')?.invalid &&
+                  formValueEducation.get('institution')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValueEducation.get('institution')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Institution is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueEducation.get('institution')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 3 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueEducation.get('institution')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 40 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--degree-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Degree</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="degree"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+
+            <!--validation degree-->
+            <div>
+              <div
+                *ngIf="
+                  formValueEducation.get('degree')?.invalid &&
+                  formValueEducation.get('degree')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValueEducation.get('degree')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Degree is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueEducation.get('degree')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 3 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueEducation.get('degree')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 40 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--date-->
+            <div class="row mb-3">
+              <label for="colFormLabel" class="col-sm-2 col-form-label"
+                >Date</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  formControlName="date"
+                  class="form-control"
+                  id="colFormLabel"
+                />
+              </div>
+            </div>
+
+            <!--validation date-->
+            <div>
+              <div
+                *ngIf="
+                  formValueEducation.get('date')?.invalid &&
+                  formValueEducation.get('date')?.touched
+                "
+                class="alert alert-warning"
+              >
+                <!--required-->
+                <div
+                  *ngIf="formValueEducation.get('date')?.errors?.['required']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Date is
+                    required
+                  </p>
+                </div>
+                <!--min length-->
+                <div
+                  *ngIf="formValueEducation.get('date')?.errors?.['minlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be at
+                    least 3 characters long
+                  </p>
+                </div>
+                <!--max length-->
+                <div
+                  *ngIf="formValueEducation.get('date')?.errors?.['maxlength']"
+                >
+                  <p>
+                    <i class="bi bi-exclamation-circle-fill"></i>Text must be
+                    less than 20 characters long
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--logical btn-->
+        <div style="background-color: #d4cbdd" class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            data-bs-dismiss="modal"
+            [disabled]="formValueEducation.invalid"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

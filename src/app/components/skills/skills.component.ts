@@ -16,7 +16,7 @@ export class SkillsComponent implements OnInit {
   showadd!: boolean;
   showupdate!: boolean;
 
-  //form add Hard Skills
+  //form change Hard Skills
   formValueHardSkill = new FormGroup({
     name: new FormControl('', [
       Validators.required,
