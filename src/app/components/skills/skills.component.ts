@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-skills',
@@ -15,16 +14,6 @@ export class SkillsComponent implements OnInit {
   //modal btn hide
   showadd!: boolean;
   showupdate!: boolean;
-
-  //form change Hard Skills
-  formValueHardSkill = new FormGroup({
-    name: new FormControl('', [
-      Validators.required,
-      Validators.minLength(1),
-      Validators.maxLength(20),
-    ]),
-    percentage: new FormControl('', [Validators.required]),
-  });
 
   constructor(private datosPortfolio: PortfolioService) {}
 

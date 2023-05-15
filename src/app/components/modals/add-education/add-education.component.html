@@ -22,7 +22,7 @@
 
         <!--form-->
         <div class="modal-body">
-          <form [formGroup]="formValueEducation">
+          <form [formGroup]="formValueEducation" (ngSubmit)="onSubmit($event)">
             <!--institution-->
             <div class="row mb-3">
               <label for="colFormLabel" class="col-sm-2 col-form-label"
@@ -34,6 +34,7 @@
                   formControlName="institution"
                   class="form-control"
                   id="colFormLabel"
+                  [(ngModel)]="institution"
                 />
               </div>
             </div>
@@ -88,6 +89,7 @@
                   formControlName="degree"
                   class="form-control"
                   id="colFormLabel"
+                  [(ngModel)]="degree"
                 />
               </div>
             </div>
@@ -142,6 +144,7 @@
                   formControlName="date"
                   class="form-control"
                   id="colFormLabel"
+                  [(ngModel)]="date"
                 />
               </div>
             </div>
@@ -197,10 +200,11 @@
             Close
           </button>
           <button
-            type="button"
+            type="submit"
             class="btn btn-success"
             data-bs-dismiss="modal"
             [disabled]="formValueEducation.invalid"
+            (click)="onCreate()"
           >
             Add
           </button>

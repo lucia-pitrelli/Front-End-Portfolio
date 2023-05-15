@@ -37,4 +37,20 @@ export class ChangeEducationComponent implements OnInit {
       this.listofCourses = data.education;
     });
   }
+
+  //to implement with the service
+  //update(): void {
+  // this.educationService.editEducation(this.listOfCourses.id).subscribe(
+  //  (data) => {
+  //    alert('Education updated successfully');
+  //  },
+  //  (err) => {
+  //    alert('Error al modificar la educacion');
+  //  }
+  //);
+  // }
+
+  // update(id:number){
+  // this.update = id;
+  //}
 }

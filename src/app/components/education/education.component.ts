@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { EducationService } from 'src/app/services/education.service';
+import { Education } from 'src/app/models/education';
 
 @Component({
   selector: 'app-education',
@@ -7,32 +8,50 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./education.component.css'],
 })
 export class EducationComponent implements OnInit {
-  //json data
-  listofCourses: any;
+  //service data
+  listOfCourses: Education[] = [];
 
   //modal btn hide
   showadd!: boolean;
   showupdate!: boolean;
 
-  constructor(private datosPortfolio: PortfolioService) {}
+  constructor(private educationService: EducationService) {}
 
-  //suscribe para utilizar el data.json
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.listofCourses = data.education; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
-    });
+    this.getEducation();
+  }
+
+  //get list of educations
+  getEducation(): void {
+    this.educationService
+      .getEducation()
+      .subscribe((listOfCourses) => (this.listOfCourses = listOfCourses));
+  }
+
+  //delete one education
+  delete(id?: number) {
+    if (id != undefined) {
+      this.educationService.deleteEducation(id).subscribe(
+        (data) => {
+          this.getEducation();
+          alert('Education deleted');
+        },
+        (err) => {
+          alert('Error deleting education');
+        }
+      );
+    }
   }
 
   //hide btn add
-  add() {
-    this.showadd = true;
-    this.showupdate = false;
-  }
+  // add() {
+  //  this.showadd = true;
+  // this.showupdate = false;
+  // }
 
   //hide btn update
-  update() {
-    this.showadd = false;
-    this.showupdate = true;
-  }
+  // update() {
+  //  this.showadd = false;
+  //  this.showupdate = true;
+  //}
 }

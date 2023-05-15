@@ -1,7 +1,7 @@
 <section>
   <div><p class="title" id="education">Education</p></div>
 
-  <div class="container_education" *ngFor="let course of listofCourses">
+  <div class="container_education" *ngFor="let course of listOfCourses">
     <div class="qualification__data">
       <div></div>
       <div>
@@ -9,25 +9,25 @@
         <span class="qualification__line"></span>
       </div>
       <div class="education_description_2">
-        <p class="title_course">{{ course.id }} | {{ course.institution }}</p>
+        <p class="title_course">{{ course.institution }}</p>
         <p class="text_course">{{ course.degree }}</p>
         <div class="icon-dates">
           <p><i class="bi bi-calendar4-week"></i>{{ course.date }}</p>
         </div>
 
-        <!--buttons changes and delete features-->
+        <!--buttons changes and delete features (click)="update(course.id)" -->
         <div class="container">
           <div class="btn-update">
             <button
+              type="button"
               class="btn btn-primary"
-              (click)="update()"
               data-bs-toggle="modal"
               data-bs-target="#educationUpdateModal"
             >
               <i class="bi bi-pencil-fill"></i>
             </button>
-            <button class="btn btn-primary">
-              <i class="bi bi-trash3-fill"></i>
+            <button type="button" class="btn btn-primary">
+              <i class="bi bi-trash3-fill" (click)="delete(course.id)"></i>
             </button>
           </div>
         </div>
@@ -44,7 +44,6 @@
   <div>
     <button
       class="btn btn-primary"
-      (click)="add()"
       data-bs-toggle="modal"
       data-bs-target="#educationModal"
     >

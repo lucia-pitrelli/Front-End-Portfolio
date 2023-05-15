@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+
+import { Education } from 'src/app/models/education';
+
+import { EducationService } from 'src/app/services/education.service';
+
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -8,8 +12,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./add-education.component.css'],
 })
 export class AddEducationComponent implements OnInit {
-  //json data
-  listofCourses: any;
+  institution: string = '';
+  degree: string = '';
+  date: number = 0;
 
   //form education
   formValueEducation = new FormGroup({
@@ -30,13 +35,30 @@ export class AddEducationComponent implements OnInit {
     ]),
   });
 
-  constructor(private datosPortfolio: PortfolioService) {}
+  constructor(private educationService: EducationService) {}
 
-  //suscribe para utilizar el data.json
-  ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.listofCourses = data.education; //entra a data.json y luego entra a el array projects para poder usar las variables de adentro
+  ngOnInit(): void {}
+
+  onCreate(): void {
+    const edu = new Education(this.institution, this.degree, this.date);
+    this.educationService.createEducation(edu).subscribe((data) => {
+      alert('Added new education');
+      window.location.reload();
     });
+  }
+
+  //if i decide to implement an btn clean
+  // clean(): void {
+  //  this.formValueEducation.reset();
+  // }
+
+  onSubmit(event: Event) {
+    event.preventDefault;
+    if (this.formValueEducation.valid) {
+      this.onCreate();
+    } else {
+      alert("Data isn't valid. Please try again");
+      this.formValueEducation.markAllAsTouched();
+    }
   }
 }

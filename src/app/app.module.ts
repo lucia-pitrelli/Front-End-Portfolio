@@ -43,7 +43,7 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
 
 import { ImgAPComponent } from './components/img-ap/img-ap.component';
 
-//import { environment } from 'src/environments/environment';
+//import { environment } from 'src/environments/environment'; donde va importado
 
 //modals
 
@@ -76,6 +76,7 @@ import { AddSkillsComponent } from './components/modals/add-skills/add-skills.co
     LoginComponent,
     SkillsComponent,
     PageNotFoundComponent,
+    ImgAPComponent,
     EducationComponent,
     ButtonLoginComponent,
     ButtonLogoutComponent,
@@ -84,7 +85,6 @@ import { AddSkillsComponent } from './components/modals/add-skills/add-skills.co
     ChangeSkillsComponent,
     ChangeEducationComponent,
     ChangeProjectComponent,
-    ImgAPComponent,
     AddEducationComponent,
     AddProjectComponent,
     AddSkillsComponent,
