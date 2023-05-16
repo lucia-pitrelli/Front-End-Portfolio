@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+
+import { EducationService } from 'src/app/services/education.service';
+
+import { Education } from 'src/app/models/education';
+
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-change-education',
@@ -7,8 +11,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./change-education.component.css'],
 })
 export class ChangeEducationComponent implements OnInit {
-  //json data
-  listofCourses: any;
+  //service data
+  listOfCourses: Education[] = [];
 
   //form update education
   formValueEducation = new FormGroup({
@@ -28,27 +32,30 @@ export class ChangeEducationComponent implements OnInit {
       Validators.maxLength(20),
     ]),
   });
-  constructor(private datosPortfolio: PortfolioService) {}
+  constructor(private educationService: EducationService) {}
 
-  //suscribe para utilizar el data.json
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.listofCourses = data.education;
-    });
+    this.getEducation();
+  }
+
+  //get list of educations
+  getEducation(): void {
+    this.educationService
+      .getEducation()
+      .subscribe((listOfCourses) => (this.listOfCourses = listOfCourses));
   }
 
   //to implement with the service
-  //update(): void {
-  // this.educationService.editEducation(this.listOfCourses.id).subscribe(
-  //  (data) => {
-  //    alert('Education updated successfully');
-  //  },
-  //  (err) => {
-  //    alert('Error al modificar la educacion');
-  //  }
-  //);
-  // }
+  update(id: number): void {
+    // this.educationService.editEducation(this.listOfCourses.id).subscribe(
+    //  (data) => {
+    //    alert('Education updated successfully');
+    // },
+    // (err) => {
+    //   alert('Error al modificar la educacion');
+    //  }
+    // );
+  }
 
   // update(id:number){
   // this.update = id;
