@@ -14,8 +14,6 @@ import { HttpClientModule } from '@angular/common/http'; //ver
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //ver
 
-//import { AuthGuard } from './services/auth.guard';
-
 const routes: Routes = [
   {
     path: '',

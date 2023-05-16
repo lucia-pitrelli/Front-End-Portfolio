@@ -1,4 +1,8 @@
-export interface SoftSkill {
-  id?: number; //cuando se crea el id podria no estar
+export class SoftSkill {
+  id?: number;
   text: string;
+
+  constructor(text: string) {
+    this.text = text;
+  }
 }

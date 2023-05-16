@@ -14,19 +14,16 @@ export class EducationService {
   constructor(private http: HttpClient) {}
 
   //list of Educations
-
   getEducation(): Observable<Education[]> {
     return this.http.get<Education[]>(this.baseUrl + '/list');
   }
 
   //one Education
-
   getEducationById(id: number): Observable<Education> {
     return this.http.get<Education>(this.baseUrl + '/id/' + id);
   }
 
   //create a new Education
-
   createEducation(data: Education): Observable<Education> {
     return this.http
       .post<Education>(this.baseUrl + '/create', data)

@@ -1,4 +1,8 @@
-export interface AboutMe {
-  id?: number; //cuando se crea el id podria no estar
+export class AboutMe {
+  id?: number;
   text: string;
+
+  constructor(text: string) {
+    this.text = text;
+  }
 }

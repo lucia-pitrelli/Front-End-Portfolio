@@ -1,5 +1,10 @@
-export interface HardSkill {
-  id?: number; //cuando se crea el id podria no estar
+export class HardSkill {
+  id?: number;
   name: string;
   percentage: number;
+
+  constructor(name: string, percentage: number) {
+    this.name = name;
+    this.percentage = percentage;
+  }
 }
