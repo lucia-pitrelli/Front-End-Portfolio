@@ -41,8 +41,6 @@ import { ButtonLogoutComponent } from './components/button-logout/button-logout.
 
 import { ImgAPComponent } from './components/img-ap/img-ap.component';
 
-//modals
-
 import { ChangeAboutComponent } from './components/modals/change-about/change-about.component';
 
 import { ChangePresentationComponent } from './components/modals/change-presentation/change-presentation.component';
@@ -52,6 +50,8 @@ import { ChangeSkillsComponent } from './components/modals/change-skills/change-
 import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
 
 import { ChangeProjectComponent } from './components/modals/change-project/change-project.component';
+
+//modals
 
 import { AddEducationComponent } from './components/modals/add-education/add-education.component';
 

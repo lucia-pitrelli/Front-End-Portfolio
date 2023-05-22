@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  //url = 'http://localhost:4200/'; // 8080
+  //import urlApi of enviorement
 
   constructor() {
     console.log('autentication service is working');
@@ -34,7 +34,7 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.loggedIn;
   }
-  // o puede ser de manera de servicio
+  // or
   // public get isLoggedIn(): boolean {
   // return(localStorage.getItem('token') !== null);
   //}

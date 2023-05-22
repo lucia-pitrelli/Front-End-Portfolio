@@ -8,11 +8,11 @@ import { LoginComponent } from './components/login/login.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { PortfolioService } from './services/portfolio.service'; //ver
+//import { PortfolioService } from './services/portfolio.service'; // use with db.json
 
-import { HttpClientModule } from '@angular/common/http'; //ver
+import { HttpClientModule } from '@angular/common/http';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //ver
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -35,6 +35,5 @@ const routes: Routes = [
     ReactiveFormsModule,
   ],
   exports: [RouterModule],
-  providers: [PortfolioService],
 })
 export class AppRoutingModule {}

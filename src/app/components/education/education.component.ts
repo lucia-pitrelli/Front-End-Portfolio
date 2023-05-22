@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { EducationService } from 'src/app/services/education.service';
-
 import { Education } from 'src/app/models/education';
 
 @Component({

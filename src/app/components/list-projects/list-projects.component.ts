@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-//import { Project } from 'src/app/models/Project';
-import { PortfolioService } from 'src/app/services/portfolio.service';
-
+import { Project } from 'src/app/models/Project';
+//import { PortfolioService } from 'src/app/services/portfolio.service';
+import { ProjectService } from 'src/app/services/project.service';
 @Component({
   selector: 'app-list-projects',
   templateUrl: './list-projects.component.html',
@@ -10,26 +10,29 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class ListProjectsComponent implements OnInit {
   //json data
-  listProjects: any;
+  //listProjects: any;
 
-  //service (not working yet)
-  // projects: Project[] = [];
+  //service
+  listProjects: Project[] = [];
 
   //testing login
-  mostrar = true;
+  //mostrar = true;
 
   //modal btn hide
   showadd!: boolean;
   showupdate!: boolean;
 
-  constructor(private datosPortfolio: PortfolioService) {}
+  constructor(private projectService: ProjectService) {}
 
-  //suscribe to use data.json
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.listProjects = data.projects;
-    });
+    this.getProjects();
+  }
+
+  //get list
+  getProjects(): void {
+    this.projectService
+      .getProjects()
+      .subscribe((listProjects) => (this.listProjects = listProjects));
   }
 
   //hide btn add
@@ -52,6 +55,3 @@ export class ListProjectsComponent implements OnInit {
   //    this.projects.push(this.selectedProject);
   //  }
 }
-
-/*colocar input en el import si lo quiero usar*/
-// listProjects = PROJECTS;
