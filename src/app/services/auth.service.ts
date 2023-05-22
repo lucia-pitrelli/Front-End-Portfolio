@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  //url = 'http://localhost:4200/'; // 8080?
+  //url = 'http://localhost:4200/'; // 8080
 
   constructor() {
     console.log('autentication service is working');
