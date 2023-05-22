@@ -7,19 +7,18 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class EducationService {
-  baseUrl = `${environment.url_api}/personas`;
+export class PersonaService {
+  //URL backend
+  baseUrl = `${environment.urlApi}/personas`;
 
   constructor(private http: HttpClient) {}
 
   //list of personas
-
   getPersona(): Observable<Persona[]> {
     return this.http.get<Persona[]>(this.baseUrl + '/list');
   }
 
   //one persona user
-
   getPersonaById(id: number): Observable<Persona> {
     return this.http.get<Persona>(this.baseUrl + '/id/' + id);
   }

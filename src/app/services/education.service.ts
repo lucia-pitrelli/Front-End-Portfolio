@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
 import { Education } from 'src/app/models/education';
-//import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EducationService {
   //URL backend
-  baseUrl = 'http://localhost:8080/educations';
+  baseUrl = `${environment.urlApi}/educations`;
 
   constructor(private http: HttpClient) {}
 

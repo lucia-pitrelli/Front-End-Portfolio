@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  url_api: 'http://localhost:8080',
+  //urlApi:"http://localhost:8080";
+  urlApi: 'https://portfolio-backend-aept.onrender.com',
 };

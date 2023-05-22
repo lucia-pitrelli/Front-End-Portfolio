@@ -12,7 +12,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ChangeEducationComponent implements OnInit {
   //service data
-  listOfCourses: Education[] = [];
+  listOfCourses = null;
+
+  educationUpdate = {
+    institution: '',
+    degree: '',
+    date: '',
+  };
 
   //form update education
   formValueEducation = new FormGroup({
@@ -35,29 +41,33 @@ export class ChangeEducationComponent implements OnInit {
   constructor(private educationService: EducationService) {}
 
   ngOnInit(): void {
-    this.getEducation();
+    //  this.getEducation();
   }
 
   //get list of educations
-  getEducation(): void {
-    this.educationService
-      .getEducation()
-      .subscribe((listOfCourses) => (this.listOfCourses = listOfCourses));
-  }
+  //getEducation(): void {
+  // this.educationService
+  //   .getEducation()
+  //   .subscribe((listOfCourses) => (this.listOfCourses = listOfCourses));
+  // }
 
   //to implement with the service
-  update(id: number): void {
-    // this.educationService.editEducation(this.listOfCourses.id).subscribe(
-    //  (data) => {
-    //    alert('Education updated successfully');
-    // },
-    // (err) => {
-    //   alert('Error al modificar la educacion');
-    //  }
-    // );
-  }
+  //update(id: number): void {
+  // this.educationService.editEducation(this.listOfCourses.id).subscribe(
+  //  (data) => {
+  //    alert('Education updated successfully');
+  // },
+  // (err) => {
+  //   alert('Error al modificar la educacion');
+  //  }
+  // );
+  //}
 
   // update(id:number){
   // this.update = id;
   //}
+
+  //update(data) {
+  //  this.educationUpdate;
+  // }
 }
