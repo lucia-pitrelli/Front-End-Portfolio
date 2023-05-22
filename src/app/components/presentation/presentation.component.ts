@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
 
+import { Persona } from 'src/app/models/persona';
+import { PersonaService } from 'src/app/services/persona.service';
 @Component({
   selector: 'app-presentation',
   templateUrl: './presentation.component.html',
   styleUrls: ['./presentation.component.css'],
 })
 export class PresentationComponent implements OnInit {
-  //json data
-  myPresentation: any;
+  //service data
+  myPresentation: Persona[] = [];
 
   //binding
   myImage = '../../../../assets/img/third-img.png';
@@ -18,14 +19,17 @@ export class PresentationComponent implements OnInit {
   //modal btn hide
   showupdate!: boolean;
 
-  constructor(private datosPortfolio: PortfolioService) {}
+  constructor(private personaService: PersonaService) {}
 
-  //suscribe para utilizar el data.json
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      //console.log('funciona presentacion', data);
-      this.myPresentation = data.persona;
-    });
+    this.getPersonas();
+  }
+
+  //get list
+  getPersonas(): void {
+    this.personaService
+      .getPersonas()
+      .subscribe((myPresentation) => (this.myPresentation = myPresentation));
   }
 
   //hide btn update

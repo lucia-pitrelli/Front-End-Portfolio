@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PersonaService } from 'src/app/services/persona.service';
+import { AboutMeService } from '../../services/about.service';
 
-import { Persona } from 'src/app/models/persona';
+import { AboutMe } from '../../models/aboutMe';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
-  //service data
-  AboutMe: Persona[] = [];
+  //service
+  aboutMe: AboutMe[] = [];
 
   //data binding
   gifAbout = '../../../assets/perfil.gif';
@@ -18,17 +18,17 @@ export class AboutComponent implements OnInit {
   //modal btn hide
   showupdate!: boolean;
 
-  constructor(private personaService: PersonaService) {}
+  constructor(private aboutMeService: AboutMeService) {}
 
   ngOnInit(): void {
-    this.getPersona();
+    this.getAbouts();
   }
 
   //get list
-  getPersona(): void {
-    this.personaService
-      .getPersona()
-      .subscribe((AboutMe) => (this.AboutMe = AboutMe));
+  getAbouts(): void {
+    this.aboutMeService
+      .getAbouts()
+      .subscribe((aboutMe) => (this.aboutMe = aboutMe));
   }
 
   //hide btn update
