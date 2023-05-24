@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
-
-import { HomeComponent } from './components/home/home.component';
-
-import { LoginComponent } from './components/login/login.component';
-
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
-//import { PortfolioService } from './services/portfolio.service'; // use with db.json
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+//components
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ChangeEducationComponent } from './components/modals/change-education/change-education.component';
 
 const routes: Routes = [
   {
@@ -23,8 +18,11 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
   },
-
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
+  {
+    path: 'editEducation/:id',
+    component: ChangeEducationComponent,
+  },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

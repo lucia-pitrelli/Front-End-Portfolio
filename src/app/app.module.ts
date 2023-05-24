@@ -1,12 +1,8 @@
 //modules
 import { NgModule } from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 
 //app component
@@ -36,8 +32,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { EducationComponent } from './components/education/education.component';
 
 import { ButtonLoginComponent } from './components/button-login/button-login.component';
-
-import { ButtonLogoutComponent } from './components/button-logout/button-logout.component';
 
 import { ImgAPComponent } from './components/img-ap/img-ap.component';
 
@@ -75,7 +69,6 @@ import { AddSkillsComponent } from './components/modals/add-skills/add-skills.co
     ImgAPComponent,
     EducationComponent,
     ButtonLoginComponent,
-    ButtonLogoutComponent,
     ChangeAboutComponent,
     ChangePresentationComponent,
     ChangeSkillsComponent,

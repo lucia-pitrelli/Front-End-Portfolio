@@ -15,17 +15,24 @@
           <p><i class="bi bi-calendar4-week"></i>{{ course.date }}</p>
         </div>
 
-        <!--buttons changes and delete features (click)="update(course.id)" -->
+        <!--buttons changes and delete features -->
         <div class="container">
           <div class="btn-update">
-            <button
+            <!--  <button
               type="button"
               class="btn btn-primary"
               data-bs-toggle="modal"
               data-bs-target="#educationUpdateModal"
             >
-              <i class="bi bi-pencil-fill"></i>
-            </button>
+              <i class="bi bi-pencil-fill" (click)="update(course.id)"></i>
+            </button>-->
+
+            <label
+              class="btn btn-primary"
+              routerLink="editEducation/{{ course.id }}"
+              ><i class="bi bi-pencil-fill"></i
+            ></label>
+
             <button type="button" class="btn btn-primary">
               <i class="bi bi-trash3-fill" (click)="delete(course.id)"></i>
             </button>
@@ -56,6 +63,6 @@
 
 <app-add-education></app-add-education>
 
-<!-- Modal update Education-->
+<!-- Modal update Education
 
-<app-change-education></app-change-education>
+<app-change-education></app-change-education>-->

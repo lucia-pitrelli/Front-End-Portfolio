@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Education } from 'src/app/models/education';
 import { environment } from 'src/environments/environment';
 
@@ -28,7 +28,6 @@ export class EducationService {
     return this.http
       .post<Education>(this.baseUrl + '/create', data)
       .pipe(map((res) => res));
-    //  .pipe(tap(() => this.Refreshrequired.next()));    VER SI LO UTILIZO en vez de map
   }
 
   //update one Education
@@ -36,7 +35,6 @@ export class EducationService {
     return this.http
       .put<Education>(this.baseUrl + '/update', data)
       .pipe(map((res) => res));
-    //  .pipe(tap(() => this.Refreshrequired.next()));    VER SI LO UTILIZO
   }
 
   //delete one Education
@@ -44,6 +42,5 @@ export class EducationService {
     return this.http
       .delete(this.baseUrl + '/delete/' + id)
       .pipe(map((res) => res));
-    //  .pipe(tap(() => this.Refreshrequired.next()));    VER SI LO UTILIZO
   }
 }
