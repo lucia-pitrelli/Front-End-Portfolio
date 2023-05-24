@@ -1,10 +1,12 @@
 {
   "hosting": {
-    "public": "dist/portfolio-pitrelli",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "public": "./dist/portfolio-pitrelli",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

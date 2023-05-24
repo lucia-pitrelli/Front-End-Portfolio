@@ -94,5 +94,6 @@ import { AddSkillsComponent } from './components/modals/add-skills/add-skills.co
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [],
 })
 export class AppModule {}

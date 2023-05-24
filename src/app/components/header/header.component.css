@@ -1,4 +1,4 @@
-.navStyle {
+#navStyle {
   padding-top: 20px;
   font-size: 18px;
   color: var(--fourth-bg-color);
@@ -11,6 +11,18 @@
 
 .nav-link {
   color: var(--third-text-color);
+}
+
+.navbar-toggler {
+  background-color: var(--third-text-color);
+  color: var(--fourth-bg-color);
+}
+
+.navbar-brand {
+  color: var(--header-color);
+  font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
 }
 
 /*section login / logout */
