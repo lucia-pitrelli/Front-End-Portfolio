@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class HardskillService {
+export class SoftskillService {
   //URL backend
   baseUrl = `${environment.urlApi}/softskills`;
 

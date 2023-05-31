@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+//service soft skill
+import { SoftSkill } from 'src/app/models/softSkill';
+import { SoftskillService } from 'src/app/services/softskill.service';
+
 //service hard skill
 import { HardskillService } from 'src/app/services/hardskill.service';
 import { HardSkill } from 'src/app/models/hardSkill';
 
 //json data
-import { PortfolioService } from 'src/app/services/portfolio.service';
+//import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-skills',
@@ -19,19 +23,22 @@ export class SkillsComponent implements OnInit {
   //hardSkill service
   listOfSkills: HardSkill[] = [];
 
+  //softSkill service
+  softSkill: SoftSkill[] = [];
+
   //modal btn hide
   showadd!: boolean;
   showupdate!: boolean;
 
   constructor(
-    private datosPortfolio: PortfolioService,
-    private hardSkillService: HardskillService
+    private hardSkillService: HardskillService,
+    private softSkillService: SoftskillService
   ) {}
 
   //suscribe to use db.json and service hard skill
   ngOnInit(): void {
     this.getHardSkills();
-    this.getSoftSkill();
+    this.getSoftSkills();
   }
 
   //get list of hard skills
@@ -41,11 +48,11 @@ export class SkillsComponent implements OnInit {
       .subscribe((listOfSkills) => (this.listOfSkills = listOfSkills));
   }
 
-  //get list soft skill
-  getSoftSkill(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      this.mySkills = data.softSkills;
-    });
+  //get soft skill
+  getSoftSkills(): void {
+    this.softSkillService
+      .getSoftSkills()
+      .subscribe((softSkill) => (this.softSkill = softSkill));
   }
 
   //hide btn add

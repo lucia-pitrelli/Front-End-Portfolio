@@ -3,20 +3,20 @@
 <div class="container-presentation">
   <div class="container text-center">
     <div class="row align-items-center">
-      <div class="col" *ngFor="let presentation of myPresentation">
+      <div class="col">
         <div class="title-presentation">
           <h1>{{ greeting }}</h1>
           <div>
-            <h1>{{ presentation.fullname }}</h1>
+            <h1>{{ myPresentation[0].fullname }}</h1>
           </div>
         </div>
         <div class="text-presentation">
           <p>
             <i class="bi bi-pc-display-horizontal"></i
-            >{{ presentation.position }}
+            >{{ myPresentation[0].position }}
           </p>
 
-          <p><i class="bi bi-geo-fill"></i>{{ presentation.ubication }}</p>
+          <p><i class="bi bi-geo-fill"></i>{{ myPresentation[0].ubication }}</p>
         </div>
 
         <!--buttons changes and delete features-->
